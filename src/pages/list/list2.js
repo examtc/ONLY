@@ -81,7 +81,7 @@ require(["../../static/conf/config.js"], function () {
         }
 
         $.ajax({
-            url: "http://localhost:9999/json/list/list1.json",//json文件位置
+            url: "http://localhost:9999/json/list/list2.json",//json文件位置
             type: "GET",//请求方式为get
             dataType: "json", //返回数据格式为json
             success: function (data) {//请求成功完成后要执行的方法 
@@ -128,6 +128,7 @@ require(["../../static/conf/config.js"], function () {
                 })
             }
         })
+
 
     })
 })

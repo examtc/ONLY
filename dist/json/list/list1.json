@@ -190,6 +190,68 @@
         "discount": 0.5, 
         "discountPrice": 349.5, 
         "originalPrice": 699
+    },{
+        "goodsName": "钩花绑带纯色连衣裙", 
+        "gscMaincolPath": "/goodsImagePC/ONLY/118107684/118107684S04/118107684S04_p3.jpg", 
+        "discount": 0.5, 
+        "discountPrice": 349.5, 
+        "originalPrice": 699
+    }, 
+    {
+        "goodsName": "系带开叉九分喇叭休闲裤", 
+        "gscMaincolPath": "/goodsImagePC/ONLY/118150522/118150522S01/118150522S01_p3.jpg", 
+        "discount": 0.5, 
+        "discountPrice": 199.5, 
+        "originalPrice": 399
+    }, 
+    {
+        "goodsName": "字母刺绣贴布宽松T恤", 
+        "gscMaincolPath": "/goodsImagePC/ONLY/118301511/118301511S02/118301511S02_p3.jpg", 
+        "discount": 0.5, 
+        "discountPrice": 124.5, 
+        "originalPrice": 249
+    }, 
+    {
+        "goodsName": "含莱卡中缝开叉低腰九分微喇牛仔裤", 
+        "gscMaincolPath": "/goodsImagePC/ONLY/118149673/118149673J36/118149673J36_p3.jpg", 
+        "discount": 0.5, 
+        "discountPrice": 224.5, 
+        "originalPrice": 449
+    }, 
+    {
+        "goodsName": "网纱拼接印花运动短裤", 
+        "gscMaincolPath": "/goodsImagePC/ONLY/118315507/118315507HBZ/118315507HBZ_p3.jpg", 
+        "discount": 0.5, 
+        "discountPrice": 124.5, 
+        "originalPrice": 249
+    }, 
+    {
+        "goodsName": "一字肩绑带两件套牛仔连衣裙", 
+        "gscMaincolPath": "/goodsImagePC/ONLY/118142535/118142535S01/118142535S01_p3.jpg", 
+        "discount": 0.5, 
+        "discountPrice": 349.5, 
+        "originalPrice": 699
+    }, 
+    {
+        "goodsName": "蕾丝拼接丝绒家居服文胸", 
+        "gscMaincolPath": "/goodsImagePC/ONLY/118303508/118303508C16/118303508C16_p3.jpg", 
+        "discount": 0.5, 
+        "discountPrice": 124.5, 
+        "originalPrice": 249
+    }, 
+    {
+        "goodsName": "毛绒家居服两件套连衣裙", 
+        "gscMaincolPath": "/goodsImagePC/ONLY/1184K6501/1184K6501S12/1184K6501S12_p3.jpg", 
+        "discount": 0.5, 
+        "discountPrice": 299.5, 
+        "originalPrice": 599
+    }, 
+    {
+        "goodsName": "ins珍珠花边套头针织衫", 
+        "gscMaincolPath": "/goodsImagePC/ONLY/119124540/119124540S04/119124540S04_p3.jpg", 
+        "discount": 0.9, 
+        "discountPrice": 249, 
+        "originalPrice": 499
     }
     
 ]

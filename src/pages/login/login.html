@@ -79,9 +79,9 @@
         <div class="nav">
             <a href="../index/index.html"><img src="../../img/index/logo.png"></a>
             <ul>
-                <li>首页</li>
+                <li><a href="../index/index.html">首页</a></li>
                 <li>
-                    所有商品
+                    <a href="../list/list1.html">所有商品</a>
                     <div class="secondNav">
                         <ul>
                             <h3><a href="">裙装</a></h3>
@@ -112,7 +112,7 @@
                     </div>
                 </li>
                 <li>
-                    热销推荐
+                    <a href="../list/list1.html">热销推荐</a>
                     <div class="secondNav">
                         <ul>
                             <h3><a href="">仙气连衣裙</a></h3>
@@ -162,7 +162,7 @@
                     </div>
                 </li>
                 <li>
-                    性感家居
+                    <a href="../list/list2.html">性感家居</a>
                     <div class="secondNav">
                         <ul>
                             <h3><a href="">家居上装</a></h3>
@@ -177,7 +177,7 @@
                     </div>
                 </li>
                 <li>
-                    ONLYPLAY
+                    <a href="../list/list3.html">ONLYPLAY</a>
                     <div class="secondNav">
                         <ul>
                             <h3><a href="">全部产品</a></h3>
@@ -197,7 +197,7 @@
                     </div>
                 </li>
                 <li>
-                    漫威合作款
+                    <a href="../list/list4.html">漫威合作款</a>
                 </li>
                 <li>
                     线上专享区
@@ -352,93 +352,5 @@
     </div>
 </body>
 <script src="../../static/script/require.js" data-main="login.js" type="text/javascript"></script>
-<!-- <script src="../../scripts/libs/jquery-2.0.3.js"></script>
-<script>
-    var userValue = null;
-    var passValue = null;
-    $(".login_user input").blur(function(){
-        userValue=$(this).val().replace(/(^\s*)|(\s*$)/g,'');
-        if(userValue == ""){
-            $(this).siblings("p").text("请输入登录名");
-            $(this).siblings(".faile").css({
-            opacity : "1"
-            });
-        }
-    })
-    $(".login_user input").focus(function(){
-        $(this).siblings("p").text("")
-        $(this).siblings(".faile").css({
-            opacity : "0"
-            });
-    })
-    $(".login_pass input").blur(function(){
-        passValue=$(this).val().replace(/(^\s*)|(\s*$)/g,'');
-        if(passValue == ""){
-            $(this).siblings("p").text("请输入密码");
-            $(this).siblings(".faile").css({
-            opacity : "1"
-            });
-        }
-    })
-    $(".login_pass input").focus(function(){
-        $(this).siblings("p").text("")
-        $(this).siblings(".faile").css({
-            opacity : "0"
-            });
-    })
-
-    $(".login_header div").click(function(){
-        var _index = $(this).index();
-        if(_index == 0){
-            $(this).children("h3").css({
-                color : "#F10180"
-            });
-            $(this).siblings().children("h3").css({
-                color : "#666"
-            })
-            $(".login_body_bycode").css({
-                display : "block"
-            });
-            $(".login_body_bypassword").css({
-                display : "none"
-            })
-        }
-        else{
-            $(this).children("h3").css({
-                color : "#F10180"
-            });
-            $(this).siblings().children("h3").css({
-                color : "#666"
-            })
-            $(".login_body_bycode").css({
-                display : "none"
-            });
-            $(".login_body_bypassword").css({
-                display : "block"
-            })
-        }
-    })
-    $(".login_submit").click(function(){
-        var obj = JSON.parse(localStorage.getItem('userinfo'));
-       var _length=obj.length;
-       var count=null;
-       for(var i=0;i<_length;i++){
-           if( userValue == obj[i].username){
-               count=i;
-           }
-       }
-       if(count == null){
-           alert("该用户未注册")
-           return false;
-       }
-       if(passValue == obj[count].password){
-           localStorage.setItem("logined",userValue);
-           window.location = "../index/index.html";
-       }
-       else{
-           alert("用户名与密码不匹配")
-       }
-    })
-</script> -->
 
 </html>

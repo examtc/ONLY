@@ -32,7 +32,6 @@ require(["../../static/conf/config.js"], function () {
                 .siblings("span").show()
                 .siblings("i").show()
         })
-
         // 加载左边栏菜单数据
         var xhr = new XMLHttpRequest();
         xhr.open("get", "http://localhost:8000/home");
@@ -41,6 +40,7 @@ require(["../../static/conf/config.js"], function () {
             render(res)
         }
         xhr.send();
+
         // 渲染左边栏菜单
         function render(res) {
             var leftItem = res.data;
@@ -51,25 +51,25 @@ require(["../../static/conf/config.js"], function () {
                 count++;
                 list1goodsHtml +=
                     `
-                <li>
-                    <span>${ele.classifyName}</span>
-                    <ul class="list1_miss">
-                `;
+               <li>
+                   <span>${ele.classifyName}</span>
+                   <ul class="list1_miss">
+               `;
                 var goodslist = ele.list;
                 // console.log(ele.classifyName)
                 goodslist.forEach(element => {
                     // console.log(element.classifyName)
                     list1goodsHtml +=
                         `
-                    <li>
-                        <a href="">${element.classifyName}</a>
-                    </li>
-                `;
+                   <li>
+                       <a href="">${element.classifyName}</a>
+                   </li>
+               `;
                 });
                 list1goodsHtml +=
                     `   </ul>
-                 </li>
-                `
+                </li>
+               `
             });
 
             // 放入html中
@@ -81,7 +81,7 @@ require(["../../static/conf/config.js"], function () {
         }
 
         $.ajax({
-            url: "http://localhost:9999/json/list/list1.json",//json文件位置
+            url: "http://localhost:9999/json/list/list3.json",//json文件位置
             type: "GET",//请求方式为get
             dataType: "json", //返回数据格式为json
             success: function (data) {//请求成功完成后要执行的方法 
@@ -95,23 +95,23 @@ require(["../../static/conf/config.js"], function () {
                 data.forEach(ele => {
                     goodsHTML +=
                         `
-                <li>
-                    <a href="###">
-                        <img src="http://www.only.cn${ele.gscMaincolPath}">
-                    </a>
-                    <p class="list1_goodsmes">
-                        <span>${ele.goodsName}</span>
-                        <i>${ele.discount * 10}.0折</i>
-                    </p>
-                    <p class="list1_goodsprise">
-                        <span class="nowprice">￥${ele.discountPrice}</span>
-                        <span class="lastprice">￥${ele.originalPrice}</span>
-                    </p>
-                    <span>
-                        快速购买
-                    </span>
-                </li>
-                `;
+               <li>
+                   <a href="###">
+                       <img src="http://www.only.cn${ele.gscMaincolPath}">
+                   </a>
+                   <p class="list1_goodsmes">
+                       <span>${ele.goodsName}</span>
+                       <i>${ele.discount * 10}.0折</i>
+                   </p>
+                   <p class="list1_goodsprise">
+                       <span class="nowprice">￥${ele.discountPrice}</span>
+                       <span class="lastprice">￥${ele.originalPrice}</span>
+                   </p>
+                   <span>
+                       快速购买
+                   </span>
+               </li>
+               `;
                 });
                 $(".list1_main_goods").append(goodsHTML);
                 $(".list1_main_goods li a img").hover(function () {
