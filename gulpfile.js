@@ -40,6 +40,10 @@ gulp.task("compileHTML", ()=>{
 		.pipe( gulp.dest("dist/pages") )
 })
 
+gulp.task("compileJSON",()=>{
+	gulp.src("src/json/**/*.json")
+	.pipe(gulp.dest("dist/json"))
+})
 
 gulp.task("server", function(){
 	//静态资源服务器 : 9999
@@ -51,9 +55,11 @@ gulp.task("server", function(){
 	gulp.watch("src/pages/**/*.js", ["compileJS"]);
 	gulp.watch("src/scripts/**/*.js", ["compileJS"]);
 	gulp.watch("src/styles/**/*.scss", ["compileCSS"]);
-	gulp.watch("src/pages/**/*.html", ["compileHTML"])
-    
-    // https://cdn.bestseller.com.cn/classify/h5/ONLY/h5_list.json
+	gulp.watch("src/pages/**/*.html", ["compileHTML"]);
+	gulp.watch("src/json/**/*.json", ["compileJSON"])
+    // https://www.only.cn/api/goods/dmpRecommendGoods?projectName=detailPage&brand=one&userId=&itemId=118149693J33&brandCode=ONLY
+	// https://www.only.cn/api/goods/goodsList?classifyIds=115508&currentpage=1&goodsHighPrice=&goodsLowPrice=&goodsSelect=&sortDirection=desc&sortType=1
+	// https://cdn.bestseller.com.cn/classify/h5/ONLY/h5_list.json    商品列表页左边栏数据 
 
 	//接口代理服务器
 	let app = express();
@@ -69,8 +75,20 @@ gulp.task("server", function(){
 		});
 		proxy.end();
 	})
+	app.get("/list1", (req,res)=>{
+		res.setHeader("Access-Control-Allow-Origin","*"); //cors
+		res.setHeader("Content-Type","text/plain; charset=utf8")
+		let proxy = https.request({
+			hostname: "www.only.cn",
+			path: "/api/goods/dmpRecommendGoods?projectName=detailPage&brand=one&userId=&itemId=118149693J33&brandCode=ONLY",
+			method: 'get'
+		}, (response) => {
+			response.pipe(res);
+		});
+		proxy.end();
+	})
 	app.listen(8000);
 })
 
 
-gulp.task("build", ["compileJS","compileCSS","compileHTML"])
+gulp.task("build", ["compileJS","compileCSS","compileHTML","compileJSON"])

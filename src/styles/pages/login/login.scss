@@ -1,0 +1,114 @@
+$highlight-color :#F90;
+$normalFont : "微软雅黑","宋体","正楷";
+*{padding:0;margin:0}
+a{text-decoration:none;color:#000000;}
+i{font-style:normal}
+li{list-style:none}
+button{border:0;outline:none;cursor:pointer;}
+body{background:url(../../../img/regist&login/regist_background.jpg) no-repeat fixed;background-size:cover}
+
+
+.outheader{height:30px;background:#f4f4f4;position:sticky;top:0;z-index:100}
+.outheader{
+    .head{ height:14px;width:1280px;margin:0 auto;padding-top:6px;
+        span{float:left;font-size:12px;color:#999;}
+        li{float:left;font-size:12px;padding-left:5px;margin-right:5px;margin-right:20px;color:#999;cursor:pointer;position: relative;}
+    }
+
+}
+.head ul{float:right}
+.head ul li:hover dl{display:block;}
+.head ul li dl{position:absolute;width:170px;height:180px;background:#f4f4f4;text-align:center;display:none;padding-top:15px;}
+.wechatCode{top:24px;left:-30px}
+.shopCode{top:24px;left:-35px}
+.phoneCode{top:24px;left:-100px}
+.outheader .head ul li dl dd{text-align:center;width:170px;color:#FF0000;}
+.index_search div{position: relative;display:none}
+.index_search div input{width:160px;outline:none;font-size:12px;}
+.index_search div label{position:absolute;right:1px;top:2px;background:url(../../../img/index/错误.png)no-repeat left center;display:inline-block;
+height:14px;width:16px}
+.index_search div span{display:inline-block;position:absolute;right:20px;top:0}
+.head ul .index_login span{color:red;text-decoration:underline;float: none}
+
+
+.outnav{height:60px;background:white;position:relative;position:sticky;top:30px;z-index:10}
+.nav{height:60px;width:1280px;margin:0 auto;padding-top:20px;}
+.nav>a img{float:left;}
+.nav>ul{float:left;margin-left:10px}
+.nav>ul>li{float:left;padding-left:15px;padding-right:15px;height:38px;font-size:18px;cursor: pointer;}
+.nav>ul>li:hover div{display:block}
+.nav>ul>li:hover{border-bottom:2px solid #000}
+.secondNav{width:1300px;height:360px;background:white;position:absolute;top:60px;left:0px;border-top:1px solid #ccc;
+    padding-top:40px;padding-left:300px;display:none}
+.secondNav ul{float:left;margin-right:50px;}
+.secondNav ul li:hover{text-decoration-color:#000;text-decoration:underline;}
+.secondNav ul h3:hover{text-decoration-color:#000;text-decoration:underline;}
+.secondNav img{float:right;margin-right:200px;}
+.secondNav ul h3{font-size:15px;margin-bottom:10px;}
+.secondNav ul li{font-size:15px;line-height:40px;}
+
+
+
+
+.login_main{height:550px;width:1050px;margin:0 auto;padding-top:70px;}
+.login_square{height:436px;width:360px;float:right;background:white;}
+.login_header{height:50px;width:360px;position: relative;border-bottom:1px solid #E0E0E0;}
+.login_header span{position:absolute;top:12px;left:180px;}
+.login_header>div{float:left;width:180px;height:50px;text-align:center;color:#666;line-height:50px;}
+.login_header>div h3{cursor:pointer;}
+.login_bycode h3{color:#F10180}
+
+.login_body_bycode{height:249px;width:360px;text-align:center;padding-top:30px;}
+.login_body_bycode dt{height:172px;width:172px;box-sizing:border-box;padding:10px;border:1px solid #E0E0E0;margin-left:94px;}
+.login_body_bycode dd{font-size:12px;color:#333;margin-top:25px;}
+
+.login_body_bypassword{height:249px;width:330px;padding-top:30px;padding-left:30px;margin-bottom:20px;display:none;}
+.login_body_bypassword div{width:300px;margin-top:5px;position:relative;}
+.login_user{height:67px;}
+.login_user input{height:46px;width:300px;border:1px solid #686666;background:url(../../../img/regist&login/user.png)no-repeat 10px center;
+    padding-left:40px;font-size:13px;outline:none;margin:0 auto;box-sizing:border-box}
+.login_pass{height:67px;}
+.login_pass input{height:46px;width:300px;border:1px solid #686666;background:url(../../../img/regist&login/lock.png)no-repeat 10px center;
+    padding-left:40px;font-size:13px;outline:none;margin:0 auto;box-sizing:border-box}
+.fogect{width:300px;height:20px;font-size:13px;}
+.fogect input{height:16px;width:16px;vertical-align:top;margin-right:5px;}
+.fogect a{float:right;font-size:12px;}
+.login_body_bypassword span{height:44px;width:32px;position:absolute;display:inline-block;right:0;top:0;opacity:0;}
+.success{background:url(../../../img/regist&login/success.png)no-repeat left center}
+.faile{background:url(../../../img/regist&login/failed.png)no-repeat left center}
+.login_body_bypassword p{font-size:12px;line-height:20px;color:#F64A4A;}
+.login_body_bypassword form>a{width:300px;height:46px;line-height:46px;text-align:center;background:#F10180;
+    color:white;font-size:18px;border:0;outline:none;cursor:pointer;margin-top:25px;display:inline-block}
+
+
+.login_foot{height:121px;width:300px;margin:0 auto;}
+.foot_wechat{height:40px;width:300px;text-align:center;position: relative;}
+.foot_wechat span{height:1px;width:300px;background:#E0E0E0;display:inline-block}
+.foot_wechat label{position:absolute;left:120px;height:50px;width:50px;background:white;top:-3px;}
+.foot_applink{width:300px;height:24px;line-height:24px;margin-top:10px;}
+.foot_applink a{font-size:12px;color:#999999;display:inline-block;margin-right:10px;}
+.foot_applink .foot_special{font-size:14px;float:right;color:black;}
+
+.outfoot{background:white;height:210px;padding-top:40px;border-bottom:1px solid #000;padding-bottom:40px;
+border-top:1px solid #000}
+.foot{width:1280px;margin:0 auto;}
+.foot>div{float:left}
+.foot_accect{width:280px;height:70px;text-align:center;padding-top:60px}
+.foot_accect dl dd{font-size:13px;line-height:24px;}
+.foot_accect button{background:#000;color:white;height:30px;width:110px;line-height:30px;font-size:13px;margin-top:10px;}
+.foot_line{width:1px;height:210px;background:#000}
+.foot_code{height:100px;width:640px;padding:40px 0 0 80px;}
+.foot_code dl{float:left;text-align:center;font-size:13px;font-weight:bold;margin-right:80px;}
+.foot_phone{height:70px;width:278px;padding-top:50px;}
+.foot_phone dl{text-align:center;font-size:12px;line-height:20px;}
+
+.service{height:70px;background:white;text-align:center;padding-top:50px;font-size:12px;
+    border-bottom:2px solid #000;}
+.service a{vertical-align:top}
+.otherBrands{height:118px;background:white;}
+.otherBrands ul{width:900px;margin:0 auto;padding-top:50px;height:60px;}
+.otherBrands ul li{float:left;margin-right:240px;
+img{width:132px;}
+}
+
+.banquan{height:36px;background:white;text-align:center;line-height:18px;font-size:12px;padding-bottom:20px}

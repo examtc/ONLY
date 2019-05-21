@@ -1,0 +1,100 @@
+$highlight-color :#F90;
+$normalFont : "微软雅黑","宋体","正楷";
+*{padding:0;margin:0}
+a{text-decoration:none;color:#000000;}
+i{font-style:normal}
+li{list-style:none}
+button{border:0;outline:none;cursor:pointer;}
+body{background:url(../../../img/regist&login/regist_background.jpg) no-repeat fixed;background-size:cover}
+
+
+.outheader{height:30px;background:#f4f4f4;position:sticky;top:0;z-index:100}
+.outheader{
+    .head{ height:14px;width:1280px;margin:0 auto;padding-top:6px;
+        span{float:left;font-size:12px;color:#999;}
+        li{float:left;font-size:12px;padding-left:5px;margin-right:5px;margin-right:20px;color:#999;cursor:pointer;position: relative;}
+    }
+
+}
+.head ul{float:right}
+.head ul li:hover dl{display:block;}
+.head ul li dl{position:absolute;width:170px;height:180px;background:#f4f4f4;text-align:center;display:none;padding-top:15px;}
+.wechatCode{top:24px;left:-30px}
+.shopCode{top:24px;left:-35px}
+.phoneCode{top:24px;left:-100px}
+.outheader .head ul li dl dd{text-align:center;width:170px;color:#FF0000;}
+.index_search div{position: relative;display:none}
+.index_search div input{width:160px;outline:none;font-size:12px;}
+.index_search div label{position:absolute;right:1px;top:2px;background:url(../../../img/index/错误.png)no-repeat left center;display:inline-block;
+height:14px;width:16px}
+.index_search div span{display:inline-block;position:absolute;right:20px;top:0}
+.head ul .index_login span{color:red;text-decoration:underline;float: none}
+
+
+.outnav{height:60px;background:white;position:relative;position:sticky;top:30px;z-index:10}
+.nav{height:60px;width:1280px;margin:0 auto;padding-top:20px;}
+.nav>a img{float:left;}
+.nav>ul{float:left;margin-left:10px}
+.nav>ul>li{float:left;padding-left:15px;padding-right:15px;height:38px;font-size:18px;cursor: pointer;}
+.nav>ul>li:hover div{display:block}
+.nav>ul>li:hover{border-bottom:2px solid #000}
+.secondNav{width:1300px;height:360px;background:white;position:absolute;top:60px;left:0px;border-top:1px solid #ccc;
+    padding-top:40px;padding-left:300px;display:none}
+.secondNav ul{float:left;margin-right:50px;}
+.secondNav ul li:hover{text-decoration-color:#000;text-decoration:underline;}
+.secondNav ul h3:hover{text-decoration-color:#000;text-decoration:underline;}
+.secondNav img{float:right;margin-right:200px;}
+.secondNav ul h3{font-size:15px;margin-bottom:10px;}
+.secondNav ul li{font-size:15px;line-height:40px;}
+
+
+
+.regist_main{height:600px;width:1200px;margin:0 auto;padding-top:50px;}
+.regist_square{height:540px;width:360px;background:white;float:right}
+.regist_header{height:50px;width:360px;line-height:50px;border-bottom:1px solid #E0E0E0;}
+.regist_header h3{font-size:18px;float: left;margin-left:30px;color:#666;}
+.regist_header p{float: left;font-size:12px;margin-left:120px;}
+.regist_header p a{color:#F10180;}
+.regist_body{height:456px;width:310px;margin:0 auto;padding-top:30px;}
+.regist_body div{margin-bottom:5px;position: relative;}
+.regist_phone,.regist_code,.regist_password,.regist_password_again{height:67px;width:300px;}
+.regist_phone input{height:46px;width:300px;border:1px solid #686666;background:url(../../../img/regist&login/手机.png)no-repeat 10px center;
+padding-left:40px;font-size:13px;outline:none;margin:0 auto;box-sizing:border-box}
+.regist_body p{font-size:12px;line-height:20px;color:#F64A4A;}
+.regist_code input{height:46px;width:158px;border:1px solid #686666;background:url(../../../img/regist&login/验证码.png)no-repeat 10px center;
+    padding-left:40px;outline:none;box-sizing:border-box;}
+.regist_code a{line-height:46px;text-align:center;height:46px;width:132px;background:#FCEDF2;color:#E24F8C;border:1px solid #FFC1E1;box-sizing:border-box;float:right;}
+.regist_password input,.regist_password_again input{height:46px;width:300px;border:1px solid #686666;background:url(../../../img/regist&login/密码.png)no-repeat 10px center;
+    padding-left:40px;font-size:13px;outline:none;margin:0 auto;box-sizing:border-box}
+.regist_server{width:300px;height:36px;font-size:12px;
+input{width:20px;}}
+.regist_server a{color:#1D94D1;line-height:18px;}
+.regist_submit{height:42px;width:300px;line-height:42px;text-align:center;outline:none;border:0;background:#F21389;margin-top:25px;color:white;font-size:16px;}
+.regist_body span{height:44px;width:32px;position:absolute;display:inline-block;right:0;top:0;opacity:0;}
+.regist_body .regist_code span{right:140px;}
+.success{background:url(../../../img/regist&login/success.png)no-repeat left center}
+.faile{background:url(../../../img/regist&login/failed.png)no-repeat left center}
+.regist_body .regist_password .successTip{color:#23AD3E;}
+
+.outfoot{background:white;height:210px;padding-top:40px;border-bottom:1px solid #000;padding-bottom:40px;border-top:1px solid #000;clear: both;}
+.foot{width:1280px;margin:0 auto;}
+.foot>div{float:left}
+.foot_accect{width:280px;height:70px;text-align:center;padding-top:60px}
+.foot_accect dl dd{font-size:13px;line-height:24px;}
+.foot_accect button{background:#000;color:white;height:30px;width:110px;line-height:30px;font-size:13px;margin-top:10px;}
+.foot_line{width:1px;height:210px;background:#000}
+.foot_code{height:100px;width:640px;padding:40px 0 0 80px;}
+.foot_code dl{float:left;text-align:center;font-size:13px;font-weight:bold;margin-right:80px;}
+.foot_phone{height:70px;width:278px;padding-top:50px;}
+.foot_phone dl{text-align:center;font-size:12px;line-height:20px;}
+
+.service{height:70px;background:white;text-align:center;padding-top:50px;font-size:12px;
+    border-bottom:2px solid #000;}
+.service a{vertical-align:top}
+.otherBrands{height:118px;background:white;}
+.otherBrands ul{width:900px;margin:0 auto;padding-top:50px;height:60px;}
+.otherBrands ul li{float:left;margin-right:240px;
+img{width:132px;}
+}
+
+.banquan{height:36px;background:white;text-align:center;line-height:18px;font-size:12px;padding-bottom:20px}

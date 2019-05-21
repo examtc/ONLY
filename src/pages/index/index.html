@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ONLY中国官方购物商城</title>
     <link rel="stylesheet" type="text/css" href="../../styles/pages/index/index.css"/>
+    <script src="../../static/script/require.js" data-main="index.js" type="text/javascript"></script>
 </head>
 <body>
     <!-- 头部 -->
@@ -13,14 +14,22 @@
     <div class="head">
         <span>1件包邮</span>
         <ul>
-            <li>登录/注册</li>
-            <li>
-                <span><img src="../../img/index/放大镜.png"></span>
-                搜索
+            <li class="index_login">
+                <i></i>
+                <a href="../login/login.html">登录</a>
+                <a href="../regist/regist.html">注册</a>
+                <span>退出</span>
             </li>
-            <!-- <li>
+            <li class="index_search">
+                <span><img src="../../img/index/放大镜.png"></span>
+                <i>搜索</i>
+                <div>
+                    <input type="text" placeholder="想找什么随便搜...">
+                    <label></label>
+                    <span>搜索</span>
+                </div>
+            </li>
 
-            </li> -->
             <li class="specialCart" style="color:#ff0000">
                 <span><img src="../../img/index/购物车.png"></span>
                 购物车<i>0</i>件
@@ -35,7 +44,7 @@
             </li>
             <li>
                 关注ONLY微信
-                    <dl class="wechatCode">
+                    <dl class="wechatCode" style="z-index:10000">
                         <dt>
                             <img src="../../img/index/code1.png"
                         </dt>
@@ -73,7 +82,7 @@
    <!-- 导航栏 -->
    <div class="outnav">
         <div class="nav">
-            <img src="../../img/index/logo.png">
+            <a href="../index/index.html"><img src="../../img/index/logo.png"></a>
             <ul>
                 <li>首页</li>
                 <li>
@@ -236,7 +245,7 @@
 
    <!-- 轮播图 -->
    <div class="slide">
-        <div class="swiper-container slideBanner">
+        <div class="swiper-container slideBanner swiper-no-swiping">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="../../img/index/banner1.jpg"></div>
                 <div class="swiper-slide"><img src="../../img/index/banner2.jpg"></div>
@@ -371,15 +380,15 @@
    <div class="outpubuliu">
        <div class="pubuliu">
            <dl>
-               <dt><img src="../../img/index/裙子1.jpg"></dt>
+               <dt><a href=""><img src="../../img/index/裙子1.jpg"></a></dt>
                <dd>气质蕾丝雪纺A字连衣裙 <i>￥899</i></dd>
            </dl>
            <dl>
-                <dt><img src="../../img/index/裙子2.jpg"></dt>
+                <dt><a href=""><img src="../../img/index/裙子2.jpg"></a></dt>
                 <dd>气质长袖衬衫薄连衣裙 <i>￥599</i></dd>
             </dl>
             <dl>
-                <dt><img src="../../img/index/裙子3.jpg"></dt>
+                <dt><a href=""><img src="../../img/index/裙子3.jpg"></a></dt>
                 <dd>气质百褶收腰雪纺连衣裙 <i>￥599</i></dd>
             </dl>
             <img src="../../img/index/pic2.png" usemap="#gaibuzl14">
@@ -400,14 +409,14 @@
    <!-- 两个合并的轮播图展示商品 -->
    <div class="outlunbo_type_a">
         <div class="lunbo_type_a">
-            <div class="swiper-container slideBg slideTogether">
+            <div class="swiper-container slideBg slideTogether swiper-no-swiping">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="../../img/index/showMain.png"></div>
                     <div class="swiper-slide"><img src="../../img/index/showMain1.png"></div>
                     <div class="swiper-slide"><img src="../../img/index/showMain3.png"></div>
+                    <div class="swiper-slide"><img src="../../img/index/showMain.png"></div>
                 </div>
             </div>
-            <div class="swiper-container slideShows slideTogether">
+            <div class="swiper-container slideShows slideTogether swiper-no-swiping">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <img src="../../img/index/show1.jpg">
@@ -526,7 +535,7 @@
    </div>
 
    <!-- 热销精选选项 -->
-   <div class="hot-Item"> 
+   <div class="hot_Item"> 
        <ul>
            <li><a href=""><span>[</span> 连衣裙 <span>]</span></a></li>
            <li><a href=""><span>[</span> t恤 <span>]</span></a></li>
@@ -536,6 +545,138 @@
            <li><a href=""><span>[</span> 雪纺衫 <span>]</span></a></li>
        </ul>    
    </div>
+
+   <!-- 热销轮播图 -->
+   <div class="hotSale">
+        <div class="swiper-container hotsaleSlide swiper-no-swiping">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href=""><img src="../../img/index/hotsale1.jpg"></a>
+                    <span>漫威宽松纯棉半袖T恤 <i>￥229</i></span>
+                </div>
+                <div class="swiper-slide">
+                        <a href=""><img src="../../img/index/hotsale2.jpg"></a>
+                    <span>宽松半袖T恤 <i>￥249</i></span>
+                </div>
+                <div class="swiper-slide">
+                        <a href=""><img src="../../img/index/hotsale3.jpg"></a>
+                    <span>宽松BF风牛仔外套 <i>￥699</i></span>
+                </div>
+            </div>
+            <div class="swiper-pagination1">
+            </div>
+        </div>
+   </div>
+
+   <!-- 热销商品 -->
+   <div class="hotSaleShow">
+       <div class="hotSaleGoods1">
+            <img src="../../img/index/rexiao5.jpg" usemap="#pbl01345"/>
+            <map name="pbl01345">
+                <area coords="106,0,600,646" href="" target="_blank">
+                <area coords="719,68,1183,410" href="" target="_blank">
+                <area coords="0,807,482,1147" href="" target="_blank">
+                <area coords="600,647,1097,1215" href="" target="_blank">
+            </map>
+            <span class="hotSaleGoods1_p1">宽松可爱短袖T恤 <i>￥199</i></span>
+            <span class="hotSaleGoods1_p2">宽松可爱短袖T恤 <i>￥199</i></span>
+            <span class="hotSaleGoods1_p3">宽松纯棉半袖T恤 <i>￥299</i></span>
+            <span class="hotSaleGoods1_p4">高腰宽松牛仔短裤 <i>￥449</i></span>
+       </div>
+       <div class="hotSaleGoods2">
+            <img src="../../img/index/rexiao6.jpg" usemap="#pb10222">
+            <map name="pb10222">
+                <area coords="103,88,497,748" href="" target="_blank">
+                <area coords="600,88,1095,748" href="" target="_blank">
+            </map>
+            <span class="hotSaleGoods2_p1">A字牛仔短裙半身裙 <i>￥449</i></span>
+            <span class="hotSaleGoods2_p2">宽松纯棉半袖T恤 <i>￥199</i></span>
+       </div>
+       <div class="hotSaleGoods3">
+            <a href=""><img src="../../img/index/rexiao7.jpg"></a>
+            <span class="hotSaleGoods3_p1">ins宽松露肩纯棉半袖T恤 <i>￥249</i></span>
+            <span class="hotSaleGoods3_p2">ins宽松露肩纯棉半袖T恤 <i>￥249</i></span>
+       </div>
+       <div class="hotSaleGoods4">
+            <img src="../../img/index/rexiao8.jpg" usemap="#pbl0455">
+            <map name="pbl0455">
+                <area coords="0,0,255,321" href="" target="_blank">
+                <area coords="0,373,252,630" href="" target="_blank">
+                <area coords="311,0,570,630" href="" target="_blank">
+                <area coords="572,0,1094,630" href="" target="_blank">
+            </map>
+            <span class="hotSaleGoods4_p1">字母亮丝宽松短袖T恤 <i>￥229</i></span>
+            <span class="hotSaleGoods4_p2">露肩宽松纯棉半袖T恤 <i>￥249</i></span>
+            <span class="hotSaleGoods4_p3">字母宽松半袖T恤 <i>￥199</i></span>
+            <span class="hotSaleGoods4_p4">字母宽松半袖T恤 <i>￥199</i></span>
+       </div>
+       <div class="hotSaleGoods5">
+            <img src="../../img/index/rexiao9.jpg" usemap="#pbl0455">
+            <map name="pbl0455">
+                <area coords="0,0,255,321" href="" target="_blank">
+                <area coords="0,373,252,630" href="" target="_blank">
+                <area coords="311,0,570,630" href="" target="_blank">
+                <area coords="572,0,1094,630" href="" target="_blank">
+            </map>
+            <span class="hotSaleGoods5_p1">印花宽松纯棉半袖T恤 <i>￥299</i></span>
+            <span class="hotSaleGoods5_p2">印花宽松纯棉半袖T恤 <i>￥299</i></span>
+       </div>
+   </div>
+
+   <!-- 尾部 -->
+   <div class="outfoot">
+        <div class="foot">
+            <div class="foot_accect">
+                <dl>
+                    <dt><img src="../../img/index/accect.png"></dt>
+                    <dd>用户服务协议</dd>
+                </dl>
+                <button>点击查看</button>
+            </div>
+            <div class="foot_line"></div>
+            <div class="foot_code">
+                <dl>
+                    <dt><img src="../../img/index/code2.jpg"></dt>
+                    <dd>专属时尚顾问</dd>
+                </dl>
+                <dl>
+                    <dt><img src="../../img/index/code3.png"></dt>
+                    <dd>小程序</dd>
+                </dl>
+                <dl>
+                    <dt><img src="../../img/index/code1.png"></dt>
+                    <dd>官方微信</dd>
+                </dl>
+            </div>
+            <div class="foot_line"></div>
+            <div class="foot_phone">
+                <dl>
+                    <dt><img src="../../img/index/phone.png"></dt>
+                    <dd>
+                        售后服务热线<br>400-862-8888<br>服务时间：9:00-21:00
+                    </dd>
+                </dl>
+            </div>
+        </div>
+   </div>
+
+   <!-- 在线答疑 -->
+   <div class="service">
+        <a href="">在线客服 即时答疑  <img src="../../img/index/service.png"> 服务时间（工作日9:00-24:00）</a>
+   </div>
+
+   <!-- 其他商标 -->
+   <div class="otherBrands">
+        <ul>
+            <li><img src="../../img/index/logo_footer1.png"></li>
+            <li><img src="../../img/index/logo_footer2.png"></li>
+            <li style="margin-right:0"><img src="../../img/index/logo_footer3.png"></li>
+        </ul>
+   </div>
+
+   <!-- 版权 -->
+   <div class="banquan">
+    © 2013 Bestseller. All Rights Reserved<br>津ICP备12007886号 -3（营业执照）
+   </div>
 </body>
-<script src="../../static/script/require.js" data-main="index.js" type="text/javascript"></script>
 </html>
