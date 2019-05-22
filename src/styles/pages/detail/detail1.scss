@@ -49,14 +49,17 @@ height:14px;width:16px}
 
 .detail_main_title{height:36px;width:1280px;margin:0 auto}
 .detail_main_title span{height:20px;font-size:14px;color:#000;line-height:20px;}
-.detail_main_top{width:1280px;height:780px;margin:0 auto;}
+.detail_main_top{width:1280px;height:780px;margin:0 auto;border-bottom:1px solid #999;padding-bottom:10px;}
 .detail_main_top_left{float:left;width:1124px;height:738px;}
-.magnifier_sm{height:744px;width:108px;float:left;margin-right:25px;}
+.magnifier_sm{height:744px;width:110px;float:left;margin-right:25px;text-align:center}
 .magnifier_sm li{height:172px;width:108px;margin-bottom:16px;cursor: pointer;
-img{height:172px;width:108px;}}
+img{height:100%;width:100%}}
+.chooseItem{border:1px solid #000}
 .magnifier_big{height:736px;width:464px;border:1px solid #000;float: left;position: relative;
 img{height: 736px;width:464px;}
-span{display:inline-block;position:absolute;width:110%;height:100%;top:0;left:103%;display:none}}
+div{cursor:move;position: absolute;left:0;top:0;height:150px;width:150px;background:rgba($color: #535666, $alpha:0.3);display:none}
+span{border:1px solid black;display:inline-block;position:absolute;width:110%;height:100%;top:0;left:103%;display:none;z-index:3;overflow: hidden;
+img{position: absolute;left:0;top:0;height:210%;width:200%}}}
 .detail_goodsInfo{height:540px;width:480px;float: left;margin-left:20px;}
 .detail_goodsInfo>h3{height:24px;width:460px;line-height:24px;font-size:22px;padding-left:20px;margin-bottom:18px;}
 .detail_goodsInfo>p{height:14px;font-size:14px;line-height:14px;color:#999;margin-bottom:18px;padding-left:20px;}
@@ -75,14 +78,14 @@ ul{width:384px;float:left;margin-bottom:10px;}}
 .goodsSizeList li{float:left;height:28px;width:92px;border:1px dashed #999;margin:0 10px 10px 0;text-align:center;
     line-height:28px;padding:0 2px;position:relative;cursor: pointer;font-size:14px;}
 .chooseLogo{background:url(../../../img/detail/rightlogo.png) no-repeat right bottom;border:1px solid #000!important;}
-.goodsColor li{float:left;height:173px;width:108px;position: relative;cursor: pointer;
+.goodsColor li{float:left;height:173px;width:108px;position: relative;cursor: pointer;margin-right:5px;
 img{height:100%}
-span{position: absolute;right:0px;bottom:4px;height:12px;width:12px;display:inline-block;opacity:0;}}
+span{position: absolute;right:0px;bottom:4px;height:12px;width:12px;display:inline-block;display:none}}
 .goodsCount>div{width:60px;height:47px;border:1px solid #999;float:left;
 i{display:inline-block;height:46px;width:40px;text-align:center;line-height:46px;font-size:18px}
 div{float:right;height:46px;width:20px;
-span{height:22px;width:16px;border-left:1px solid #999;background:#F3F3F3;cursor: pointer;
-    border-bottom:1px solid #999;text-align:center;line-height:22px;float:right;margin-bottom:1px}}}
+span{height:22px;width:16px;border-left:1px solid #999;color:#999;background:#F3F3F3;cursor: pointer;user-select: none;
+    border-bottom:1px solid #999;text-align:center;line-height:22px;float:right}}}
 .goodsCount p{font-size:14px;color:#999;width:80px;height:16px;float:left;margin:12px 0 0 20px;
 i{color:#d91e25}}
 .goodsChoose_btn{height:60px;width:480px;clear:both;margin-top:130px;padding-left:10px;
@@ -93,19 +96,28 @@ border:1px solid #000;cursor: pointer;margin-right:5px;background:url(../../../i
 }
 
 .detail_main_top_right{float:right;width:150px;height:780px;border-left:1px dashed #999;text-align:center;
-h3{font-weight:normal;font-size:16px;text-align:center;height:20px;line-height:20px;}
-li {margin-top:15px;img{height:204px;width:128px;}
-span{font-size:14px;}}
+    h3{font-weight:normal;font-size:16px;text-align:center;height:20px;line-height:20px;}
+    li {margin-top:15px;img{height:204px;width:128px;}
+    span{font-size:14px;}}}
 
-}
-
+.detail_main_body{width:1280px;margin:0 auto;margin-top:30px;}
+.detail_goodslist{width:158px;float:left;padding-left:21px;}
+.detail_goodslist span{height:20px;font-weight:700;font-size:14px;line-height:28px;cursor:pointer;user-select:none;}
+.detail_goodslist li ul li{color:#666;font-weight:400;font-size:13px;line-height:28px;height:28px;margin-left:15px;}
+.detail__ListHide{display:none;}
+.detail_body_middle{width:950px;float:left;text-align:center;margin-bottom:30px;border-right:1px dashed #999;}
+.detail_body_middle>div>img{width:730px;}
+.detail_body_right{width:150px;float:left;text-align:center;
+    h3{font-weight:normal;font-size:16px;text-align:center;height:20px;line-height:20px;}
+    li {margin-top:15px;img{height:204px;width:128px;}
+    span{font-size:14px;}}}
 
 
 
 
 
 .outfoot{background:white;height:210px;padding-top:40px;border-bottom:1px solid #000;padding-bottom:40px;
-    border-top:1px solid #000}
+    border-top:1px solid #000;clear: both;}
     .foot{width:1280px;margin:0 auto;}
     .foot>div{float:left}
     .foot_accect{width:280px;height:70px;text-align:center;padding-top:60px}
@@ -118,7 +130,7 @@ span{font-size:14px;}}
     .foot_phone dl{text-align:center;font-size:12px;line-height:20px;}
     
     .service{height:70px;background:white;text-align:center;padding-top:50px;font-size:12px;
-        border-bottom:2px solid #000;}
+        border-bottom:2px solid #000;clear: both;}
     .service a{vertical-align:top}
     .otherBrands{height:118px;background:white;}
     .otherBrands ul{width:900px;margin:0 auto;padding-top:50px;height:60px;}
@@ -126,4 +138,4 @@ span{font-size:14px;}}
     img{width:132px;}
     }
 
-    .banquan{height:36px;background:white;text-align:center;line-height:18px;font-size:12px;padding-bottom:20px}
+    .banquan{height:36px;background:white;text-align:center;line-height:18px;font-size:12px;padding-bottom:20px;clear: both;}

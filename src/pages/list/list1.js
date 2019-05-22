@@ -96,7 +96,7 @@ require(["../../static/conf/config.js"], function () {
                     goodsHTML +=
                         `
                 <li>
-                    <a href="###">
+                    <a href="../detail/detail1.html?design=${ele.goodsCode}">
                         <img src="http://www.only.cn${ele.gscMaincolPath}">
                     </a>
                     <p class="list1_goodsmes">

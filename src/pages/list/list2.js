@@ -62,7 +62,7 @@ require(["../../static/conf/config.js"], function () {
                     list1goodsHtml +=
                         `
                     <li>
-                        <a href="">${element.classifyName}</a>
+                        <a href="###">${element.classifyName}</a>
                     </li>
                 `;
                 });
@@ -96,7 +96,7 @@ require(["../../static/conf/config.js"], function () {
                     goodsHTML +=
                         `
                 <li>
-                    <a href="###">
+                    <a href="../detail/detail1.html?design=${ele.goodsCode}">
                         <img src="http://www.only.cn${ele.gscMaincolPath}">
                     </a>
                     <p class="list1_goodsmes">
@@ -115,7 +115,7 @@ require(["../../static/conf/config.js"], function () {
                 });
                 $(".list1_main_goods").append(goodsHTML);
                 $(".list1_main_goods li a img").hover(function () {
-                    console.log($(this))
+                    // console.log($(this))
                     $(this).stop().animate({
                         height: "560px",
                         width: "350px"

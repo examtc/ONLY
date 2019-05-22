@@ -4,167 +4,191 @@
         "gscMaincolPath": "/goodsImagePC/ONLY/118301540/118301540H2Z/118301540H2Z_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 124.5, 
-        "originalPrice": 249
+        "originalPrice": 249,
+        "goodsCode": "118301540H2Z"
     }, 
     {
         "goodsName": "反光印花高腰运动打底裤", 
         "discount": 0.5, 
         "discountPrice": 149.5, 
         "gscMaincolPath": "/goodsImagePC/ONLY/118365501/118365501E21/118365501E21_p3.jpg", 
-        "originalPrice": 299
+        "originalPrice": 299,
+        "goodsCode": "118365501E21"
     }, 
     {
         "goodsName": "字母印花贴条装饰卫衣", 
         "gscMaincolPath": "/goodsImagePC/ONLY/11839S588/11839S588S01/11839S588S01_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 224.5, 
-        "originalPrice": 449
+        "originalPrice": 449,
+        "goodsCode": "11839S588S01"
     }, 
     {
         "goodsName": "露指连帽加绒卫衣外套", 
         "gscMaincolPath": "/goodsImagePC/ONLY/11839R509/11839R509S01/11839R509S01_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 224.5, 
-        "originalPrice": 449
+        "originalPrice": 449,
+        "goodsCode": "11839R509S01"
     }, 
     {
         "goodsName": "条纹修身弹力运动打底裤", 
         "gscMaincolPath": "/goodsImagePC/ONLY/1183SL501/1183SL501S03/1183SL501S03_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 149.5, 
-        "originalPrice": 299
+        "originalPrice": 299,
+        "goodsCode": "1183SL501S03"
     }, 
     {
         "goodsName": "网纱拼接印花运动短裤", 
         "gscMaincolPath": "/goodsImagePC/ONLY/118315507/118315507HBZ/118315507HBZ_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 124.5, 
-        "originalPrice": 249
+        "originalPrice": 249,
+        "goodsCode": "118315507HBZ"
     }, 
     {
         "discount": 0.5, 
         "discountPrice": 299.5, 
         "gscMaincolPath": "/goodsImagePC/ONLY/11839R508/11839R508S01/11839R508S01_p3.jpg", 
         "goodsName": "字母印花拼接卫衣外套", 
-        "originalPrice": 599
+        "originalPrice": 599,
+        "goodsCode": "11839R508S01"
     }, 
     {
         "goodsName": "字母图案宽松连帽卫衣", 
         "gscMaincolPath": "/goodsImagePC/ONLY/11839S592/11839S592S01/11839S592S01_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 174.5, 
-        "originalPrice": 349
+        "originalPrice": 349,
+        "goodsCode": "11839S592S01"
     }, 
     {
         "goodsName": "字母印花贴条装饰卫衣", 
         "gscMaincolPath": "/goodsImagePC/ONLY/11839S588/11839S588C38/11839S588C38_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 224.5, 
-        "originalPrice": 449
+        "originalPrice": 449,
+        "goodsCode": "11839S588C38"
     }, 
     {
         "discount": 0.5, 
         "discountPrice": 174.5, 
         "gscMaincolPath": "/goodsImagePC/ONLY/11831D506/11831D506S01/11831D506S01_p3.jpg", 
         "goodsName": "字母印花束脚运动裤", 
-        "originalPrice": 349
+        "originalPrice": 349,
+        "goodsCode": "11831D506S01"
     }, 
     {
         "goodsName": "露背两件套运动背心", 
         "gscMaincolPath": "/goodsImagePC/ONLY/118303503/118303503H1Z/118303503H1Z_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 199.5, 
-        "originalPrice": 399
+        "originalPrice": 399,
+        "goodsCode": "118303503H1Z"
     }, 
     {
         "discount": 0.5, 
         "discountPrice": 274.5, 
         "gscMaincolPath": "/goodsImagePC/ONLY/11839R507/11839R507S01/11839R507S01_p3.jpg", 
         "goodsName": "字母图案拉链卫衣外套", 
-        "originalPrice": 549
+        "originalPrice": 549,
+        "goodsCode": "11839R507S01"
     }, 
     {
         "goodsName": "交叉设计修身短款T恤", 
         "gscMaincolPath": "/goodsImagePC/ONLY/118301600/118301600S01/118301600S01_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 124.5, 
-        "originalPrice": 249
+        "originalPrice": 249,
+        "goodsCode": "118301600S01"
     }, 
     {
         "goodsName": "拉链网纱印花运动文胸", 
         "gscMaincolPath": "/goodsImagePC/ONLY/1183BT501/1183BT501E21/1183BT501E21_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 124.5, 
-        "originalPrice": 249
+        "originalPrice": 249,
+        "goodsCode": "1183BT501E21"
     }, 
     {
         "goodsName": "交叉带印花设计露背T恤", 
         "discount": 0.5, 
         "discountPrice": 224.5, 
         "gscMaincolPath": "/goodsImagePC/ONLY/118303515/118303515S01/118303515S01_p3.jpg", 
-        "originalPrice": 449
+        "originalPrice": 449,
+        "goodsCode": "118303515S01"
     }, 
     {
         "goodsName": "含莫代尔宽松薄短袖T恤", 
         "gscMaincolPath": "/goodsImagePC/ONLY/119101599/119101599S04/119101599S04_p3.jpg", 
         "discount": 9, 
         "discountPrice": 124.5, 
-        "originalPrice": 249
+        "originalPrice": 249,
+        "goodsCode": "119101599S04"
     }, 
     {
         "goodsName": "装饰线抽绳运动休闲裤", 
         "gscMaincolPath": "/goodsImagePC/ONLY/11831D507/11831D507S01/11831D507S01_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 174.5, 
-        "originalPrice": 349
+        "originalPrice": 349,
+        "goodsCode": "11831D507S01"
     }, 
     {
         "goodsName": "背部交叉连帽短款T恤", 
         "gscMaincolPath": "/goodsImagePC/ONLY/118302535/118302535S01/118302535S01_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 174.5, 
-        "originalPrice": 349
+        "originalPrice": 349,
+        "goodsCode": "118302535S01"
     }, 
     {
         "goodsName": "黑色休闲运动吊带背心", 
         "gscMaincolPath": "/goodsImagePC/ONLY/119103504/119103504S01/119103504S01_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 114.5, 
-        "originalPrice": 229
+        "originalPrice": 229,
+        "goodsCode": "119103504S01"
     }, 
     {
         "goodsName": "印花镂空字母套头卫衣", 
         "gscMaincolPath": "/goodsImagePC/ONLY/11839S593/11839S593S01/11839S593S01_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 174.5, 
-        "originalPrice": 349
+        "originalPrice": 349,
+        "goodsCode": "11839S593S01"
     }, 
     {
         "goodsName": "彩色字母运动休闲裤", 
         "discount": 0.5, 
         "discountPrice": 174.5, 
         "gscMaincolPath": "/goodsImagePC/ONLY/11841D504/11841D504S01/11841D504S01_p3.jpg", 
-        "originalPrice": 349
+        "originalPrice": 349,
+        "goodsCode": "11841D504S01"
     }, 
     {
         "goodsName": "字母图案交叉设计T恤", 
         "discount": 0.5, 
         "discountPrice": 124.5, 
         "gscMaincolPath": "/goodsImagePC/ONLY/118301606/118301606C19/118301606C19_p3.jpg", 
-        "originalPrice": 249
+        "originalPrice": 249,
+        "goodsCode": "118301606C19"
     }, 
     {
         "goodsName": "字母印花一字领卫衣", 
         "gscMaincolPath": "/goodsImagePC/ONLY/11839S590/11839S590S01/11839S590S01_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 174.5, 
-        "originalPrice": 349
+        "originalPrice": 349,
+        "goodsCode": "11839S590S01"
     }, 
     {
         "goodsName": "ONLY PLAY2018文胸", 
         "gscMaincolPath": "/goodsImagePC/ONLY/1183BT504/1183BT504S01/1183BT504S01_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 149.5, 
-        "originalPrice": 299
+        "originalPrice": 299,
+        "goodsCode": "1183BT504S01"
     }
 ]

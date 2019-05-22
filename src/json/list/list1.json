@@ -5,7 +5,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118136545/118136545E56/118136545E56_p1.jpg",
         "originalPrice": 799, 
         "discountPrice": 399.5, 
-        "discount": 0.5
+        "discount": 0.5,
+        "goodsCode": "118136545"
     }, 
     {
         "goodsName": "中缝毛边低腰九分喇叭牛仔裤", 
@@ -13,7 +14,8 @@
         "movepic": "http://www.only.cn//goodsImagePC/ONLY/118149693/118149693J33/118149693J33_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 249.5, 
-        "originalPrice": 499
+        "originalPrice": 499,
+        "goodsCode": "118149693"
     }, 
     {
         "goodsName": "破洞开叉系带开身针织衫", 
@@ -21,7 +23,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/11813A501/11813A501F12/11813A501F12_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 249.5, 
-        "originalPrice": 499
+        "originalPrice": 499,
+        "goodsCode": "118107623H5I"
     }, 
     {
         "goodsName": "含莱卡毛边绑带低腰九分直筒牛仔裤", 
@@ -29,7 +32,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118132567/118132567J35/118132567J35_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 224.5, 
-        "originalPrice": 449
+        "originalPrice": 449,
+        "goodsCode": "118132567"
     }, 
     {
         "goodsName": "蕾丝镂空修身连衣裙", 
@@ -37,7 +41,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118107616/118107616S01/118107616S01_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 299.5, 
-        "originalPrice": 599
+        "originalPrice": 599,
+        "goodsCode": "118107616"
     }, 
     {
         "goodsName": "含莱卡磨白毛边低腰喇叭牛仔裤", 
@@ -45,7 +50,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118149672/118149672J36/118149672J36_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 249.5, 
-        "originalPrice": 499
+        "originalPrice": 499,
+        "goodsCode": "118149672"
     }, 
     {
         "goodsName": "含莱卡磨破毛边低腰九分甜心喇叭牛仔裤", 
@@ -53,7 +59,9 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118149683/118149683J33/118149683J33_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 249.5, 
-        "originalPrice": 499
+        "originalPrice": 499,
+        "goodsCode": "118149683"
+
     }, 
     {
         "goodsName": "中缝毛边低腰九分喇叭牛仔裤", 
@@ -61,7 +69,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118149693/118149693J35/118149693J35_p1.jpg", 
         "discount": 0.5, 
         "discountPrice": 249.5, 
-        "originalPrice": 499
+        "originalPrice": 499,
+       "goodsCode": "118149693"
     }, 
     {
         "goodsName": "双排扣可调节袖宽松薄款风衣外套", 
@@ -69,7 +78,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118136567/118136567E56/118136567E56_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 324.5, 
-        "originalPrice": 649
+        "originalPrice": 649,
+        "goodsCode": "118136567"
     }, 
     {
         "goodsName": "网眼开叉速干宽松T恤", 
@@ -77,7 +87,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118301540/118301540H2Z/118301540H2Z_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 124.5, 
-        "originalPrice": 249
+        "originalPrice": 249,
+        "goodsCode": "118301540"
     }, 
     {
         "goodsName": "纯棉印花低腰九分烟管牛仔裤", 
@@ -85,7 +96,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118149698/118149698J32/118149698J32_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 249.5, 
-        "originalPrice": 499
+        "originalPrice": 499,
+        "goodsCode": "118149698"
     }, 
     {
         "goodsName": "含莱卡链条裤线毛边低腰九分贴身牛仔裤", 
@@ -93,7 +105,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118149690/118149690J19/118149690J19_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 249.5, 
-        "originalPrice": 499
+        "originalPrice": 499,
+        "goodsCode": "118149690"
     }, 
     {
         "goodsName": "吊带一字肩雪纺连衣裙", 
@@ -101,7 +114,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118107602/118107602H5F/118107602H5F_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 349.5, 
-        "originalPrice": 699
+        "originalPrice": 699,
+        "goodsCode": "118107602"
     }, 
     {
         "goodsName": "反光印花高腰运动打底裤", 
@@ -109,7 +123,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118365501/118365501E21/118365501E21_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 149.5, 
-        "originalPrice": 299
+        "originalPrice": 299,
+        "goodsCode": "118365501"
     }, 
     {
         "goodsName": "一字肩吊带仙女连衣裙", 
@@ -117,7 +132,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118207631/118207631A13/118207631A13_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 349.5, 
-        "originalPrice": 699
+        "originalPrice": 699,
+        "goodsCode": "118207631"
     }, 
     {
         "goodsName": "镂空钩花喇叭袖宽松T恤", 
@@ -125,7 +141,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118130537/118130537S12/118130537S12_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 149.5, 
-        "originalPrice": 299
+        "originalPrice": 299,
+        "goodsCode": "118130537"
     }, 
     {
         "goodsName": "双排扣可调节袖宽松薄款风衣外套", 
@@ -133,7 +150,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118136567/118136567C13/118136567C13_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 324.5, 
-        "originalPrice": 649
+        "originalPrice": 649,
+        "goodsCode": "118136567"
     }, 
     {
         "goodsName": "荷叶边碎花雪纺连衣裙", 
@@ -141,7 +159,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118207627/118207627A44/118207627A44_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 349.5, 
-        "originalPrice": 699
+        "originalPrice": 699,
+        "goodsCode": "118424511"
     }, 
     {
         "goodsName": "气质仙女网纱套装连衣裙", 
@@ -149,7 +168,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/119107615/119107615H35/119107615H35_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 299, 
-        "originalPrice": 599
+        "originalPrice": 599,
+        "goodsCode": "118149689"
     }, 
     {
         "goodsName": "一字肩吊带雪纺连衣裙", 
@@ -157,7 +177,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118107676/118107676HBI/118107676HBI_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 249.5, 
-        "originalPrice": 499
+        "originalPrice": 499,
+        "goodsCode": "118207631"
     }, 
     {
         "goodsName": "双排扣可调节袖宽松薄款风衣外套", 
@@ -165,7 +186,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118136567/118136567F11/118136567F11_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 324.5, 
-        "originalPrice": 649
+        "originalPrice": 649,
+        "goodsCode": "118107617H32"
     }, 
     {
         "goodsName": "刺绣两件套民族风连衣裙", 
@@ -173,7 +195,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118107674/118107674C18/118107674C18_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 374.5, 
-        "originalPrice": 749
+        "originalPrice": 749,
+        "goodsCode": "118207625HB5"
     }, 
     {
         "goodsName": "两件套系带雪纺连衣裙", 
@@ -181,7 +204,8 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118107623/118107623H75/118107623H75_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 374.5, 
-        "originalPrice": 749
+        "originalPrice": 749,
+        "goodsCode": "118207625HB5"
     }, 
     {
         "goodsName": "一字肩吊带仙女连衣裙", 
@@ -189,34 +213,41 @@
         "movepic": "http://www.only.cn/goodsImagePC/ONLY/118207631/118207631S02/118207631S02_p1.jpg",
         "discount": 0.5, 
         "discountPrice": 349.5, 
-        "originalPrice": 699
+        "originalPrice": 699,
+        "goodsCode": "118207631"
+
     },{
         "goodsName": "钩花绑带纯色连衣裙", 
         "gscMaincolPath": "/goodsImagePC/ONLY/118107684/118107684S04/118107684S04_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 349.5, 
-        "originalPrice": 699
+        "originalPrice": 699,
+        "goodsCode": "118365501"
+
     }, 
     {
         "goodsName": "系带开叉九分喇叭休闲裤", 
         "gscMaincolPath": "/goodsImagePC/ONLY/118150522/118150522S01/118150522S01_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 199.5, 
-        "originalPrice": 399
+        "originalPrice": 399,
+        "goodsCode": "118365501"
     }, 
     {
         "goodsName": "字母刺绣贴布宽松T恤", 
         "gscMaincolPath": "/goodsImagePC/ONLY/118301511/118301511S02/118301511S02_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 124.5, 
-        "originalPrice": 249
+        "originalPrice": 249,
+        "goodsCode": "118301540"
     }, 
     {
         "goodsName": "含莱卡中缝开叉低腰九分微喇牛仔裤", 
         "gscMaincolPath": "/goodsImagePC/ONLY/118149673/118149673J36/118149673J36_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 224.5, 
-        "originalPrice": 449
+        "originalPrice": 449,
+        "goodsCode": "118365501"
     }, 
     {
         "goodsName": "网纱拼接印花运动短裤", 
@@ -230,28 +261,32 @@
         "gscMaincolPath": "/goodsImagePC/ONLY/118142535/118142535S01/118142535S01_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 349.5, 
-        "originalPrice": 699
+        "originalPrice": 699,
+        "goodsCode": "118107616"
     }, 
     {
         "goodsName": "蕾丝拼接丝绒家居服文胸", 
         "gscMaincolPath": "/goodsImagePC/ONLY/118303508/118303508C16/118303508C16_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 124.5, 
-        "originalPrice": 249
+        "originalPrice": 249,
+        "goodsCode": "118303508C16"
     }, 
     {
         "goodsName": "毛绒家居服两件套连衣裙", 
         "gscMaincolPath": "/goodsImagePC/ONLY/1184K6501/1184K6501S12/1184K6501S12_p3.jpg", 
         "discount": 0.5, 
         "discountPrice": 299.5, 
-        "originalPrice": 599
+        "originalPrice": 599,
+        "goodsCode": "1184K6501S12"
     }, 
     {
         "goodsName": "ins珍珠花边套头针织衫", 
         "gscMaincolPath": "/goodsImagePC/ONLY/119124540/119124540S04/119124540S04_p3.jpg", 
         "discount": 0.9, 
         "discountPrice": 249, 
-        "originalPrice": 499
+        "originalPrice": 499,
+        "goodsCode": "119124540S04"
     }
     
 ]

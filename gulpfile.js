@@ -56,13 +56,12 @@ gulp.task("server", function(){
 	gulp.watch("src/scripts/**/*.js", ["compileJS"]);
 	gulp.watch("src/styles/**/*.scss", ["compileCSS"]);
 	gulp.watch("src/pages/**/*.html", ["compileHTML"]);
-	gulp.watch("src/json/**/*.json", ["compileJSON"])
-    // https://www.only.cn/api/goods/dmpRecommendGoods?projectName=detailPage&brand=one&userId=&itemId=118149693J33&brandCode=ONLY
-	// https://www.only.cn/api/goods/goodsList?classifyIds=115508&currentpage=1&goodsHighPrice=&goodsLowPrice=&goodsSelect=&sortDirection=desc&sortType=1
-	// https://cdn.bestseller.com.cn/classify/h5/ONLY/h5_list.json    商品列表页左边栏数据 
-
+	gulp.watch("src/json/**/*.json", ["compileJSON"])  
+	
 	//接口代理服务器
 	let app = express();
+	// 商品列表页左边栏数据 
+	// https://cdn.bestseller.com.cn/classify/h5/ONLY/h5_list.json 
 	app.get("/home", (req,res)=>{
 		res.setHeader("Access-Control-Allow-Origin","*"); //cors
 		res.setHeader("Content-Type","text/plain; charset=utf8")
@@ -83,6 +82,55 @@ gulp.task("server", function(){
 			path: "/api/goods/dmpRecommendGoods?projectName=detailPage&brand=one&userId=&itemId=118149693J33&brandCode=ONLY",
 			method: 'get'
 		}, (response) => {
+			response.pipe(res);
+		});
+		proxy.end();
+	})
+	
+	// 商品详情页图片信息
+	// https://www.only.cn/api/goods/dmpRecommendGoods?projectName=firstPageHot&brand=one&userId=&itemId=&brandCode=ONLY
+	app.get("/detail1", (req,res)=>{
+		res.setHeader("Access-Control-Allow-Origin","*"); //cors
+		res.setHeader("Content-Type","text/plain; charset=utf8")
+		// console.log(res)
+		// console.log(req)
+		// var urlR = (req.query.design).substring(0,9);
+		// console.log(urlR)
+		let proxy = https.request({
+			hostname: "www.only.cn",
+			path: "/api/goods/dmpRecommendGoods?projectName=firstPageHot&brand=one&userId=&itemId=&brandCode=ONLY",
+			method: 'get'
+		}, (response) => { 
+			response.pipe(res);
+		});
+		proxy.end();
+	})
+	// 商品详情数据
+	// https://cdn.bestseller.com.cn/detail/ONLY/119201660.json
+	app.get("/detail2", (req,res)=>{
+		res.setHeader("Access-Control-Allow-Origin","*"); //cors
+		res.setHeader("Content-Type","text/plain; charset=utf8")
+		var urlR = (req.query.design).substring(0,9);
+		// console.log(urlR)
+		let proxy = https.request({
+			hostname: "cdn.bestseller.com.cn",
+			path: `/detail/ONLY/${urlR}.json`,
+			method: 'get'
+		}, (response) => { 
+			response.pipe(res);
+		});
+		proxy.end();
+	})
+	app.get("/detail3", (req,res)=>{
+		res.setHeader("Access-Control-Allow-Origin","*"); //cors
+		res.setHeader("Content-Type","text/plain; charset=utf8")
+		var urlR = (req.query.design).substring(0,9);
+		console.log(urlR)
+		let proxy = https.request({
+			hostname: "cdn.bestseller.com.cn",
+			path: `/detail/ONLY/${urlR}.json`,
+			method: 'get'
+		}, (response) => { 
 			response.pipe(res);
 		});
 		proxy.end();
