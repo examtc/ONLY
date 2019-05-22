@@ -33,5 +33,9 @@ require(["../../static/conf/config.js"], function () {
                 .siblings("span").show()
                 .siblings("i").show()
         })
+
+
+        //以下是详情页JS
+        
     })
 })

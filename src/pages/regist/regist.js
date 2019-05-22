@@ -241,7 +241,7 @@ require(["../../static/conf/config.js"], function () {
                 $(this).siblings("p").text("两次输入的密码不一致，请重试");
                 status4 = false;
             }
-            else {
+            if (password2Value == $(".regist_password input").val() && password2Value !=="") {
                 $(this).siblings(".faile").css({
                     opacity: "0"
                 });
@@ -255,6 +255,12 @@ require(["../../static/conf/config.js"], function () {
             $(this).siblings("p").text("");
             $(this).css({
                 borderColor: "#686666"
+            });
+            $(this).siblings(".faile").css({
+                opacity: "0"
+            });
+            $(this).siblings(".success").css({
+                opacity: "0"
             })
         })
 
