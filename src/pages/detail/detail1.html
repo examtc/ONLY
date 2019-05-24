@@ -10,6 +10,14 @@
 </head>
 
 <body>
+    <!-- 添加成功时候的页面 -->
+    <div class="addsuccess">
+        <h2>成功添加购物车</h2>
+        <p>
+            <a href="../cart/cart.html">去购物车结算</a>
+            <span>继续购物</span>
+        </p>
+    </div>
     <!-- 头部 -->
     <div class="outheader">
         <div class="head">
@@ -34,6 +42,15 @@
                 <li class="specialCart" style="color:#ff0000">
                     <span><img src="../../img/index/购物车.png"></span>
                     购物车<i>0</i>件
+                    <div class="smCartMessage">
+                        <h3>最近加入的商品</h3>
+                        <ul>
+                        </ul>
+                        <div>
+                            <p>共计<i>5</i>件商品</p>
+                            <a href="../cart/cart.html">去购物车</a>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <span><img src="../../img/index/订单.png"></span>
@@ -225,7 +242,7 @@
                     </div>
                 </li>
                 <li>
-                    爱消除联名款
+                    <a href="../list/list5.html">爱消除联名款</a>
                     <div class="secondNav">
                         <ul>
                             <h3><a href="">全部T恤</a></h3>
@@ -329,25 +346,10 @@
             </ul>
         </div>
         <div class="detail_body_middle">
-            <!-- <div>
-                <img src="../../img/detail/detail1.jpg">
-            </div>  -->
         </div>
         <div class="detail_body_right">
             <h3>---猜你喜欢---</h3>
             <ul>
-                <!-- <li>
-                    <a href=""><img src="../../img/detail/hotsale1.jpg"></a>
-                    <span>￥229</span>
-                </li>
-                <li>
-                    <a href=""><img src="../../img/detail/hotsale2.jpg"></a>
-                    <span>￥149</span>
-                </li>
-                <li>
-                    <a href=""><img src="../../img/detail/hotsale3.jpg"></a>
-                    <span>￥449</span>
-                </li> -->
             </ul>
         </div>
     </div>
@@ -409,298 +411,5 @@
     </div>
 </body>
 <script src="../../static/script/require.js" data-main="detail1.js" type="text/javascript"></script>
-<script src="../../scripts/libs/jquery-2.0.3.js"></script>
-<script>
-
-    // 放大镜
-    $(".magnifier_big").mouseover(function () {
-        $(".magnifie_move").show()
-        $(".magnifier_showpic").show()
-    })
-    $(".magnifier_big").mouseout(function () {
-        $(".magnifie_move").hide()
-        $(".magnifier_showpic").hide()
-    })
-
-    $(".magnifier_big").mousemove(function (e) {
-        var l = e.pageX - $(".magnifier_big").offset().left - ($(".magnifie_move").width() / 2)
-        var t = e.pageY - $(".magnifier_big").offset().top - ($(".magnifie_move").height() / 2)
-        if (l < 0) {
-            l = 0
-        }
-        if (l > $(this).width() - $(".magnifie_move").width()) {
-            l = $(this).width() - $(".magnifie_move").width()
-        }
-        if (t < 0) {
-            t = 0
-        }
-        if (t > $(this).height() - $(".magnifie_move").height()) {
-            t = $(this).height() - $(".magnifie_move").height()
-        }
-
-        $(".magnifie_move").css({
-            "left": l,
-            "top": t
-        })
-        var pX = l / ($(".magnifier_big").width() - $(".magnifie_move").width())
-        var pY = t / ($(".magnifier_big").height() - $(".magnifie_move").height())
-        // console.log(pX,pY)
-        $(".magnifier_showpic img").css({
-            "left": -pX * ($(".magnifier_showpic img").width() - $(".magnifier_showpic").width()),
-            "top": -pY * ($(".magnifier_showpic img").height() - $(".magnifier_showpic").height())
-        })
-
-
-
-    })
-
-    // 商品数量加减
-    // $(".goodsCount span").first().click(function () {
-    //     var _count = parseInt($(".goodsCount div>i").text());
-    //     if (_count < 10)
-    //         _count++;
-    //     $(".goodsCount div>i").text(_count)
-    // }).siblings().click(function () {
-    //     var _count = parseInt($(".goodsCount div>i").text());
-    //     if (_count > 1)
-    //         _count--;
-    //     $(".goodsCount div>i").text(_count)
-    // })
-
-    // 渲染列表
-    var xhr = new XMLHttpRequest();
-    xhr.open("get", "http://localhost:8000/home");
-    xhr.onload = function () {
-        var res = JSON.parse(xhr.response)
-        render(res)
-    }
-    xhr.send();
-    // 渲染左边栏菜单
-    function render(res) {
-        var leftItem = res.data;
-
-        var list1goodsHtml = "";
-        var count = 0;
-        leftItem.forEach(ele => {
-            count++;
-            list1goodsHtml +=
-                `
-                <li>
-                    <span>${ele.classifyName}</span>
-                    <ul>
-                `;
-            var goodslist = ele.list;
-            // console.log(ele.classifyName)
-            goodslist.forEach(element => {
-                // console.log(element.classifyName)
-                list1goodsHtml +=
-                    `
-                    <li>
-                        <a href="?${element.classifyId}">${element.classifyName}</a>
-                    </li>
-                `;
-            });
-            list1goodsHtml +=
-                `   </ul>
-                 </li>
-                `
-        });
-
-        // 放入html中
-        $(".detail_goodslist").append(list1goodsHtml);
-        // 点击隐藏二级菜单
-        $(".detail_goodslist li span").click(function () {
-            $(this).siblings("ul").toggleClass(" detail__ListHide")
-        })
-    }
-
-    // 自渲染商品细节图片
-    ; +(function () {
-        var detailGoodsRenderHtml = "";
-        for (var i = 1; i < 27; i++) {
-            detailGoodsRenderHtml +=
-                `
-                <div>
-                    <img src="../../img/detail/detail${i}.jpg">
-                </div>
-                `
-        }
-        $(".detail_body_middle").append(detailGoodsRenderHtml);
-        var _height = $(".detail_body_middle")
-        // console.log(_height)
-    })()
-
-    // 渲染右边栏图片展示
-    $.ajax({
-        url: "http://localhost:8000/detail1",//json文件位置
-        type: "GET",//请求方式为get
-        dataType: "json", //返回数据格式为json
-        success: function (res) {//请求成功完成后要执行的方法 
-            var _json = res.data;
-            var detail_rightHTML = "";
-            _json.forEach(ele => {
-                // console.log(ele.picurls[1])
-                detail_rightHTML +=
-                    `
-                    <li>
-                        <a href="?design=${ele.colorCode}"><img src="https://www.only.cn${ele.picurls[0]}"></a>
-                        <span>￥${ele.price}</span>
-                    </li>
-                    `;
-            })
-            $(".detail_body_right ul").append(detail_rightHTML);
-
-        }
-    })
-
-    // 整体渲染
-    $.ajax({
-        url: `http://localhost:8000/detail2${window.location.search}`,//json文件位置
-        type: "GET",//请求方式为get
-        dataType: "json", //返回数据格式为json
-        success: function (res) {//请求成功完成后要执行的方法 
-            console.log(res.data);
-            var _class = res.data.color;
-            var str1 = "";
-            var str2 = "";
-            var str3 = "";
-            var str4 = "";
-            var str5 = "";
-            var str6 = "";
-            $(".detail_main_title span").text(`首页/${res.data.goodsName}`)
-            str1 +=
-                `
-                <li><img src="https://www.only.cn${_class[0].picurls[0]}"></li>
-                <li><img src="https://www.only.cn${_class[0].picurls[1]}"></li>
-                <li><img src="https://www.only.cn${_class[0].picurls[2]}"></li>
-                <li><img src="https://www.only.cn${_class[0].picurls[3]}"></li>
-                `;
-            $(".magnifier_sm").append(str1);
-
-            $(".magnifier_sm li").click(function () {
-                $(this).addClass("chooseItem")
-                    .css({
-                        height: "170px"
-                    })
-                    .siblings().removeClass("chooseItem")
-                    .css({
-                        height: "172px"
-                    })
-                var _index = $(this).index()
-                if (_index == 0) {
-                    $(".magnifier_big img").attr("src", `https://www.only.cn${_class[0].picurls[0]}`);
-
-                }
-                if (_index == 1) {
-                    $(".magnifier_big img").attr("src", `https://www.only.cn${_class[0].picurls[1]}`);
-
-                }
-                if (_index == 2) {
-                    $(".magnifier_big img").attr("src", `https://www.only.cn${_class[0].picurls[2]}`);
-
-                }
-                if (_index == 3) {
-                    $(".magnifier_big img").attr("src", `https://www.only.cn${_class[0].picurls[3]}`);
-
-                }
-            })
-
-            str2 +=
-                `
-                        <span class="goods_price">价格</span>
-                        <span class="goods_nowPrice">￥${_class[0].price}</span>
-                        <span class="goods_lastPrice">吊牌价 ￥ ${_class[0].originalPrice}</span>
-                        <i>5.0折</i>
-                        `;
-            $(".priceline").append(str2);
-            str3 += `
-                        <h3>${res.data.goodsName}</h3>
-                        <p>产品编号:${_class[0].colorCode}</p>`;
-            $(".detail_goodsInfo").prepend(str3);
-            str4 +=
-                `
-                        <img src="https://www.only.cn${_class[0].picurls[0]}">
-                        `
-            $(".magnifier_big").prepend(str4)
-            $(".magnifier_showpic").append(str4);
-
-            res.data.color.forEach(ele => {
-                str5 +=
-                    `
-                            <li>
-                                <img src="https://www.only.cn${ele.picurls[1]}">
-                                <span><img src="../../img/detail/rightlogo.png"></span>
-                            </li>
-                            `;
-            });
-            $(".goodsColor ul").append(str5)
-            // 点击图片选择颜色
-            var random_select = parseInt(Math.random() * 14 + 2)
-            $(".goodsColor ul li").click(function () {
-                $(this).addClass("chooseLogo").children("span").show().parent()
-                    .siblings().removeClass("chooseLogo").children("span").hide();
-                var _number = $(this).index();
-                console.log(_number)
-                // 显示库存
-                $(".goodsCount p i").text(random_select + _number * 3);
-                var _maxCount=$(".goodsCount p i").text();
-                $(".goodsCount span").first().click(function () {
-                    var _count = parseInt($(".goodsCount div>i").text());
-                    if (_count < _maxCount){
-                        _count++;
-                    }
-                    
-                    $(".goodsCount div>i").text(_count)
-                }).siblings().click(function () {
-                    var _count = parseInt($(".goodsCount div>i").text());
-                    if (_count > 1)
-                        _count--;
-                    $(".goodsCount div>i").text(_count)
-                })
-                str6 +=
-                    `
-                    <li><img src="https://www.only.cn${_class[_number].picurls[0]}"></li>
-                    <li><img src="https://www.only.cn${_class[_number].picurls[1]}"></li>
-                    <li><img src="https://www.only.cn${_class[_number].picurls[2]}"></li>
-                    <li><img src="https://www.only.cn${_class[_number].picurls[3]}"></li>
-                    `
-                $(".magnifier_sm").empty()
-                $(".magnifier_sm").append(str6);
-                $(".magnifier_big>img").attr("src", `https://www.only.cn${_class[_number].picurls[0]}`);
-                $(".magnifier_showpic>img").attr("src", `https://www.only.cn${_class[_number].picurls[0]}`)
-                str6 = "";
-                $(".magnifier_sm li").click(function () {
-                    $(this).addClass("chooseItem")
-                        .css({
-                            height: "170px"
-                        })
-                        .siblings().removeClass("chooseItem")
-                        .css({
-                            height: "172px"
-                        })
-                    var _index1 = $(this).index()
-                    if (_index1 == 0) {
-                        $(".magnifier_big img").attr("src", `https://www.only.cn${_class[_number].picurls[0]}`);
-
-                    }
-                    if (_index1 == 1) {
-                        $(".magnifier_big img").attr("src", `https://www.only.cn${_class[_number].picurls[1]}`);
-
-                    }
-                    if (_index1 == 2) {
-                        $(".magnifier_big img").attr("src", `https://www.only.cn${_class[_number].picurls[2]}`);
-
-                    }
-                    if (_index1 == 3) {
-                        $(".magnifier_big img").attr("src", `https://www.only.cn${_class[_number].picurls[3]}`);
-
-                    }
-                })
-            });
-
-        }
-
-    })
-</script>
 
 </html>

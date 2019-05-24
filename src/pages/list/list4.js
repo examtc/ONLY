@@ -129,5 +129,44 @@ require(["../../static/conf/config.js"], function () {
             }
         })
 
+        // 导航栏购物车信息
+        var cart_message = JSON.parse(localStorage.getItem("cart"));
+        console.log(cart_message);
+        var _cartHTML = "";
+        cart_message.forEach(ele => {
+            _cartHTML +=
+                `
+                <li>
+                    <img src="https://www.only.cn${ele.pic}">
+                    <div>
+                        <p class="smCartMessage_des">
+                            <label>${ele.des}</label>
+                            <i>￥${ele.priseNow}</i> <b>x${ele.count}</b>
+                        </p>
+                        <p class="smCartMessage_color">
+                            颜色：<i>${ele.color}</i>
+                        </p>
+                        <p class="smCartMessage_size">
+                            尺码：<i>${ele.size}</i>
+                        </p>
+                        <button>删除</button>
+                    </div>
+                </li>
+                `
+        });
+        $(".smCartMessage ul").prepend(_cartHTML);
+        $(".smCartMessage>div p i").text(cart_message.length)
+        $(".smCartMessage ul li button").click(function () {
+            var sm_cart_count = $(this).parent("div").parent("li").index();
+            $(this).parent("div").parent("li").remove();
+            cart_message.splice(sm_cart_count, 1);
+            $(".smCartMessage>div p i").text(parseInt($(".smCartMessage>div p i").text())-1);
+            $(".specialCart>i").text(parseInt($(".specialCart>i").text())-1)
+            localStorage.setItem("cart", JSON.stringify(cart_message))
+        })
+
+        // 设置开头购物车中商品的数量
+        var _cartNmuber = JSON.parse(localStorage.getItem("cart")).length;
+        $(".specialCart>i").text(_cartNmuber);
     })
 })

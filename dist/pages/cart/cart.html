@@ -5,19 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>商品详情</title>
-    <link rel="stylesheet" type="text/css" href="../../styles/pages/detail/detail1.css" />
+    <title>购物车</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/pages/cart/cart.css" />
+    <script src="../../static/script/require.js" data-main="cart.js" type="text/javascript"></script>
 </head>
 
 <body>
-    <!-- 添加成功时候的页面 -->
-    <div class="addsuccess">
-        <h2>成功添加购物车</h2>
-        <p>
-            <a href="../cart/cart.html">去购物车结算</a>
-            <span>继续购物</span>
-        </p>
-    </div>
     <!-- 头部 -->
     <div class="outheader">
         <div class="head">
@@ -45,6 +38,22 @@
                     <div class="smCartMessage">
                         <h3>最近加入的商品</h3>
                         <ul>
+                            <!-- <li>
+                                    <img src="../../img/detail/sm1.jpg">
+                                    <div>
+                                        <p class="smCartMessage_des">
+                                            <label>好看的衣服哈哈哈哈</label>
+                                            <i>￥299</i> <b>x2</b>
+                                        </p>
+                                        <p class="smCartMessage_color">
+                                            颜色：<i>脏粉</i>
+                                        </p>
+                                        <p class="smCartMessage_size">
+                                            尺码：<i></i>
+                                        </p>
+                                        <button>删除</button>
+                                    </div>
+                                </li> -->
                         </ul>
                         <div>
                             <p>共计<i>5</i>件商品</p>
@@ -255,103 +264,114 @@
         </div>
     </div>
 
-    <!-- 商品详情页标题 -->
-    <div class="detail_main_title">
-        <span>
-            首页/性感家居/系带宽松垂感风衣外套
-        </span>
+    <!-- 购物车主体部分 -->
+    <div class="cart_top">
+        <div class="cart_title">
+            <h3>首页 / 购物车</h3>
+        </div>
+        <p>购物车</p>
+        <span class="cart_top_active">1.查看购物车</span>
+        <span>2.填写并核对订单</span>
+        <span style="margin-right:0">3.成功提交订单</span>
     </div>
-
-    <!-- 商品详情主版块头部 -->
-    <div class="detail_main_top">
-        <div class="detail_main_top_left">
-            <ul class="magnifier_sm">
-            </ul>
-            <div class="magnifier_big">
-                <!-- <img src="../../img/detail/big1.jpg"> -->
-                <div class="magnifie_move">
-                    <!-- 小放大镜 -->
-                </div>
-                <span class="magnifier_showpic">
-                    <!-- <img src="../../img/detail/big1.jpg"> -->
-                </span>
-            </div>
-            <div class="detail_goodsInfo">
-                <div class="goodsPrice">
-                    <p class="priceline">
-                    </p>
-                    <p class="activeline">
-                        <span class="active_title">本店活动</span>
-                        <span class="active_all">满一件，包邮</span>
-                    </p>
-                </div>
-                <div class="goodsSizeList">
-                    <h4>尺码</h4>
-                    <ul>
-                        <li class="chooseLogo">155/76A/XS</li>
-                        <li>160/80A/S</li>
-                        <li>165/84A/M</li>
-                        <li>170/88A/L</li>
-                        <li>175/92A/XL</li>
-                    </ul>
-                </div>
-                <div class="goodsColor">
-                    <h4>颜色</h4>
-                    <ul>
-                    </ul>
-                </div>
-                <div class="goodsCount">
-                    <h4>数量</h4>
-                    <div>
-                        <i>1</i>
-                        <div>
-                            <span>+</span>
-                            <span>-</span>
-                        </div>
+    <div class="cart_main_title">
+        <h3>订单摘要</h3>
+        <p><i>1</i>个结果</p>
+    </div>
+    <div class="cart_main_body">
+        <div class="cart_main_body_head">
+            <span class="_allcheck">
+                <input type="checkbox">
+                全选
+            </span>
+            <span class="_goodsdes">
+                商品描述
+            </span>
+            <span class="_goodscolor">
+                颜色
+            </span>
+            <span class="_goodssize">
+                尺码
+            </span>
+            <span class="_goodscount">
+                数量
+            </span>
+            <span class="_goodsprise">
+                单价
+            </span>
+            <span class="_goodsallprise">
+                总价
+            </span>
+        </div>
+        <div class="cart_main_body_goodsItem">
+            <ul>
+                <!-- <li>
+                    <div class="cart_goodspic">
+                        <input type="checkbox">
+                        <img src="../../img/detail/sm1.jpg">
                     </div>
-                    <p>库存: <i>10</i> 件</p>
-                </div>
-                <div class="goodsChoose_btn">
-                    <span class="join_cart">加入购物车</span>
-                    <span class="now_buy">立即购买</span>
-                </div>
+                    <p class="cart_goodsname">中缝毛边低腰九分喇叭牛仔裤</p>
+                    <div class="cart_color">
+                        <select>
+                            <option>
+                                11111
+                            </option>
+                            <option>
+                                22222
+                            </option>
+                        </select>
+                    </div>
+                    <div class="cart_size">
+                        <select>
+                            <option>
+                                150/60A/XSR
+                            </option>
+                            <option>
+                                160/64A/SR
+                            </option>
+                            <option>
+                                165/68A/MR
+                            </option>
+                            <option>
+                                170/72A/LR
+                            </option>
+                            <option>
+                                175/76A/XLR
+                            </option>
+                            <option>
+                                180/80A/XXLR
+                            </option>
+                        </select>
+                    </div>
+                    <div class="cart_count">
+                        <div>
+                            <b>1</b>
+                            <div>
+                                <label>+</label>
+                                <label>-</label>
+                            </div>
+                        </div>
+                        <p>库存:<strong>1</strong>件</p>
+                    </div>
+                    <div class="cart_oneprice">
+                        ￥249.5
+                    </div>
+                    <p class="cart_allprice">
+                        ￥249.5
+                    </p>
+                    <div class="delete_cart">
+                        从购物车中删除
+                    </div>
+                </li> -->
+            </ul>
+            <p class="cart_main_body_footer"><button>清空购物车</button></p>
+            <div class="cart_last">
+                <a href="../index/index.html">继续购物</a>
+                <label class="jiesuan">结算</label>
+                <label class="cart_last_all">商品总金额：￥<i>0</i></span>
             </div>
         </div>
 
-        <div class="detail_main_top_right">
-            <h3>---热销推荐---</h3>
-            <ul>
-                <li>
-                    <a href="../detail/detail1.html?design=119201660S02"><img src="../../img/detail/hotsale1.jpg"></a>
-                    <span>￥229</span>
-                </li>
-                <li>
-                    <a href="../detail/detail1.html?design=119161525S01"><img src="../../img/detail/hotsale2.jpg"></a>
-                    <span>￥149</span>
-                </li>
-                <li>
-                    <a href="../detail/detail1.html?design=119107703D09"><img src="../../img/detail/hotsale3.jpg"></a>
-                    <span>￥449</span>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-
-    <!-- 商品详情图片信息 -->
-    <div class="detail_main_body">
-        <div class="detail_body_list">
-            <!-- 商品列表JSON渲染 -->
-            <ul class="detail_goodslist">
-            </ul>
-        </div>
-        <div class="detail_body_middle">
-        </div>
-        <div class="detail_body_right">
-            <h3>---猜你喜欢---</h3>
-            <ul>
-            </ul>
-        </div>
     </div>
 
     <!-- 尾部 -->
@@ -410,6 +430,189 @@
         © 2013 Bestseller. All Rights Reserved<br>津ICP备12007886号 -3（营业执照）
     </div>
 </body>
-<script src="../../static/script/require.js" data-main="detail1.js" type="text/javascript"></script>
+<script src="../../scripts/libs/jquery-2.0.3.js"></script>
+<script>
+    // //   设置登录欢迎信息
+    // var loginUser = localStorage.getItem("logined")
+    // if (loginUser != null) {
+    //     $(".index_login a").hide()
+    //         .siblings("i").text("欢迎您" + loginUser)
+    //         .siblings("span").show();
+    // }
+    // else {
+    //     $(".index_login span").hide();
+    // }
+    // // 退出登录
+    // $(".index_login span").click(function () {
+    //     $(this).hide().siblings("a").show()
+    //         .siblings("i").text("");
+    //     localStorage.removeItem("logined");
+
+    // })
+    // $(".index_search i").click(function () {
+    //     $(this).hide()
+    //         .siblings("span").hide()
+    //         .siblings("div").css({
+    //             display: "inline-block"
+    //         })
+    // })
+    // $(".index_search div label").click(function () {
+    //     $(this).parent("div").css({
+    //         display: "none"
+    //     })
+    //         .siblings("span").show()
+    //         .siblings("i").show()
+    // })
+
+
+    // var cart_message = JSON.parse(localStorage.getItem("cart"));
+    // console.log(cart_message);
+    // $(".cart_main_title p").children("i").text(cart_message.length)
+    // var cart_HTML = "";
+    // cart_message.forEach(ele => {
+    //     cart_HTML +=
+    //         `
+    //     <li>
+    //                 <div class="cart_goodspic">
+    //                     <input type="checkbox">
+    //                     <img src="https://www.only.cn/${ele.pic}">
+    //                 </div>
+    //                 <p class="cart_goodsname">${ele.des}</p>
+    //                 <div class="cart_color">
+    //                     ${ele.color}
+    //                 </div>
+    //                 <div class="cart_size">
+    //                      ${ele.size}
+    //                 </div>
+    //                 <div class="cart_count">
+    //                     <div>
+    //                         <b>${ele.count}</b>
+    //                         <div>
+    //                             <label class="count_add">+</label>
+    //                             <label class="count_low">-</label>
+    //                         </div>
+    //                     </div>
+    //                     <p>库存:<strong>${ele.sell}</strong>件</p>
+    //                 </div>
+    //                 <div class="cart_oneprice">
+    //                     ￥<i>${ele.priseNow}</i>
+    //                 </div>
+    //                 <p class="cart_allprice">
+    //                     ￥<i>${ele.priseNow * ele.count}</i>
+    //                 </p>
+    //                 <div class="delete_cart">
+    //                     从购物车中删除
+    //                 </div>
+    //             </li>
+    //     `;
+    // })
+    // $(".cart_main_body_goodsItem ul").append(cart_HTML)
+    //     ;
+    // // 删除购物车
+    // $(".delete_cart").click(function () {
+    //     var deledet_index = $(this).parent("li").index();
+    //     $(this).parent("li").remove();
+    //     cart_message.splice(deledet_index, 1);
+    //     localStorage.setItem("cart", JSON.stringify(cart_message))
+    // })
+
+    // // 清空购物车
+    // $(".cart_main_body_footer").children("button").click(function () {
+    //     $(this).parent().siblings("ul").children("li").remove()
+    //     localStorage.removeItem("cart")
+    // })
+
+    // // console.log($(".cart_count").find("b").text())
+    // // 数量加减
+    // $(".count_add").click(function () {
+    //     var _number = $(this).parent("div").siblings("b").text();
+    //     // console.log($(this).parent("div").parent("div").siblings("p").children("strong").text())
+    //     if (_number < parseInt($(this).parent("div").parent("div").siblings("p").children("strong").text())) {
+    //         _number++;
+    //         $(this).parent("div").siblings("b").text(_number);
+    //         var _danjia = $(this).parent("div").parent("div").parent("div").siblings(".cart_oneprice").children("i").text();
+    //         $(this).parent("div").parent("div").parent("div").siblings(".cart_allprice").children("i")
+    //             .text((_danjia * _number).toFixed(1))
+    //     };
+    //     var _arr = $(".cart_main_body_goodsItem").find(":checked");
+    //     var _sss = 0;
+    //     for (var i = 0; i < _arr.length; i++) {
+    //         _sss += parseFloat($(_arr[i]).parent("div").siblings(".cart_allprice").children("i").text());
+    //     }
+    //     $(".cart_last_all").children("i").text(_sss)
+    // })
+    // $(".count_low").click(function () {
+    //     var _number = $(this).parent("div").siblings("b").text();
+    //     if (_number > 1) {
+    //         _number--;
+    //         $(this).parent("div").siblings("b").text(_number);
+    //         var _danjia = $(this).parent("div").parent("div").parent("div").siblings(".cart_oneprice").children("i").text();
+    //         $(this).parent("div").parent("div").parent("div").siblings(".cart_allprice").children("i")
+    //             .text((_danjia * _number).toFixed(1))
+    //     };
+    //     var _arr = $(".cart_main_body_goodsItem").find(":checked");
+    //     var _sss = 0;
+    //     for (var i = 0; i < _arr.length; i++) {
+    //         _sss += parseFloat($(_arr[i]).parent("div").siblings(".cart_allprice").children("i").text());
+    //     }
+    //     $(".cart_last_all").children("i").text(_sss)
+    // })
+    // $("._allcheck").children("input").change(function () {
+    //     if ($(this).is(":checked")) {
+    //         $(".cart_main_body_goodsItem ul").children("li").find("input").prop("checked", true)
+    //     }
+    //     else {
+    //         $(".cart_main_body_goodsItem ul").children("li").find("input").prop("checked", false)
+    //     }
+    // })
+    // $(".cart_main_body").find("input").change(function () {
+    //     var _arr = $(".cart_main_body_goodsItem").find(":checked");
+    //     var _sss = 0;
+    //     for (var i = 0; i < _arr.length; i++) {
+    //         _sss += parseFloat($(_arr[i]).parent("div").siblings(".cart_allprice").children("i").text());
+    //     }
+    //     $(".cart_last_all").children("i").text(_sss)
+    // })
+
+
+    // // 导航栏购物车信息
+    // var cart_message = JSON.parse(localStorage.getItem("cart"));
+    // console.log(cart_message);
+    // var _cartHTML = "";
+    // cart_message.forEach(ele => {
+    //     _cartHTML +=
+    //         `
+    //     <li>
+    //         <img src="https://www.only.cn${ele.pic}">
+    //         <div>
+    //             <p class="smCartMessage_des">
+    //                 <label>${ele.des}</label>
+    //                 <i>￥${ele.priseNow}</i> <b>x${ele.count}</b>
+    //             </p>
+    //             <p class="smCartMessage_color">
+    //                 颜色：<i>${ele.color}</i>
+    //             </p>
+    //             <p class="smCartMessage_size">
+    //                 尺码：<i>${ele.size}</i>
+    //             </p>
+    //             <button>删除</button>
+    //         </div>
+    //     </li>
+    //     `
+    // });
+    // $(".smCartMessage ul").prepend(_cartHTML);
+    // $(".smCartMessage>div p i").text(cart_message.length)
+    // $(".smCartMessage ul li button").click(function () {
+    //     var sm_cart_count = $(this).parent("div").parent("li").index();
+    //     $(this).parent("div").parent("li").remove();
+    //     cart_message.splice(sm_cart_count, 1);
+    //     localStorage.setItem("cart", JSON.stringify(cart_message))
+    // })
+
+    // // 设置开头购物车中商品的数量
+    // var _cartNmuber = JSON.parse(localStorage.getItem("cart")).length;
+    // $(".specialCart>i").text(_cartNmuber);
+
+</script>
 
 </html>

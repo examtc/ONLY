@@ -33,6 +33,7 @@ require(["../../static/conf/config.js"], function () {
                 .siblings("i").show()
         })
 
+
         // 加载左边栏菜单数据
         var xhr = new XMLHttpRequest();
         xhr.open("get", "http://localhost:8000/home");
@@ -51,25 +52,25 @@ require(["../../static/conf/config.js"], function () {
                 count++;
                 list1goodsHtml +=
                     `
-                <li>
-                    <span>${ele.classifyName}</span>
-                    <ul class="list1_miss">
-                `;
+               <li>
+                   <span>${ele.classifyName}</span>
+                   <ul class="list1_miss">
+               `;
                 var goodslist = ele.list;
                 // console.log(ele.classifyName)
                 goodslist.forEach(element => {
                     // console.log(element.classifyName)
                     list1goodsHtml +=
                         `
-                    <li>
-                        <a href="###">${element.classifyName}</a>
-                    </li>
-                `;
+                   <li>
+                       <a href="###">${element.classifyName}</a>
+                   </li>
+               `;
                 });
                 list1goodsHtml +=
                     `   </ul>
-                 </li>
-                `
+                </li>
+               `
             });
 
             // 放入html中
@@ -81,7 +82,7 @@ require(["../../static/conf/config.js"], function () {
         }
 
         $.ajax({
-            url: "http://localhost:9999/json/list/list2.json",//json文件位置
+            url: "http://localhost:9999/json/list/list5.json",//json文件位置
             type: "GET",//请求方式为get
             dataType: "json", //返回数据格式为json
             success: function (data) {//请求成功完成后要执行的方法 
@@ -95,23 +96,22 @@ require(["../../static/conf/config.js"], function () {
                 data.forEach(ele => {
                     goodsHTML +=
                         `
-                <li>
-                    <a href="../detail/detail1.html?design=${ele.goodsCode}">
-                        <img src="http://www.only.cn${ele.gscMaincolPath}">
-                    </a>
-                    <p class="list1_goodsmes">
-                        <span>${ele.goodsName}</span>
-                        <i>${ele.discount * 10}.0折</i>
-                    </p>
-                    <p class="list1_goodsprise">
-                        <span class="nowprice">￥${ele.discountPrice}</span>
-                        <span class="lastprice">￥${ele.originalPrice}</span>
-                    </p>
-                    <span>
-                        快速购买
-                    </span>
-                </li>
-                `;
+               <li>
+                   <a href="../detail/detail1.html?design=${ele.goodsCode}">
+                       <img src="http://www.only.cn${ele.gscMaincolPath}">
+                   </a>
+                   <p class="list1_goodsmes">
+                       <span>${ele.goodsName}</span>
+                   </p>
+                   <p class="list1_goodsprise">
+                       <span class="nowprice">￥${ele.discountPrice}</span>
+                       <span class="lastprice">火爆热卖不打折</span>
+                   </p>
+                   <span>
+                       快速购买
+                   </span>
+               </li>
+               `;
                 });
                 $(".list1_main_goods").append(goodsHTML);
                 $(".list1_main_goods li a img").hover(function () {
@@ -154,19 +154,20 @@ require(["../../static/conf/config.js"], function () {
         </li>
         `
         });
-        $(".smCartMessage ul").prepend(_cartHTML);
+        $(".smCartMessage ul").append(_cartHTML);
         $(".smCartMessage>div p i").text(cart_message.length)
         $(".smCartMessage ul li button").click(function () {
             var sm_cart_count = $(this).parent("div").parent("li").index();
             $(this).parent("div").parent("li").remove();
             cart_message.splice(sm_cart_count, 1);
             $(".smCartMessage>div p i").text(parseInt($(".smCartMessage>div p i").text())-1);
-            $(".specialCart>i").text(parseInt($(".specialCart>i").text())-1);
+            $(".specialCart>i").text(parseInt($(".specialCart>i").text())-1)
             localStorage.setItem("cart", JSON.stringify(cart_message))
         })
 
         // 设置开头购物车中商品的数量
         var _cartNmuber = JSON.parse(localStorage.getItem("cart")).length;
         $(".specialCart>i").text(_cartNmuber);
+
     })
 })
