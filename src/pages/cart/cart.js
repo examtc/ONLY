@@ -33,47 +33,47 @@ require(["../../static/conf/config.js"], function () {
                 .siblings("i").show()
         })
 
-
+        // 获取购物车数据
         var cart_message = JSON.parse(localStorage.getItem("cart"));
         console.log(cart_message);
         $(".cart_main_title p").children("i").text(cart_message.length)
         var cart_HTML = "";
         cart_message.forEach(ele => {
             cart_HTML +=
-                `
-     <li>
-                 <div class="cart_goodspic">
-                     <input type="checkbox">
-                     <img src="https://www.only.cn/${ele.pic}">
-                 </div>
-                 <p class="cart_goodsname">${ele.des}</p>
-                 <div class="cart_color">
-                     ${ele.color}
-                 </div>
-                 <div class="cart_size">
-                      ${ele.size}
-                 </div>
-                 <div class="cart_count">
-                     <div>
-                         <b>${ele.count}</b>
-                         <div>
-                             <label class="count_add">+</label>
-                             <label class="count_low">-</label>
-                         </div>
-                     </div>
-                     <p>库存:<strong>${ele.sell}</strong>件</p>
-                 </div>
-                 <div class="cart_oneprice">
-                     ￥<i>${ele.priseNow}</i>
-                 </div>
-                 <p class="cart_allprice">
-                     ￥<i>${ele.priseNow * ele.count}</i>
-                 </p>
-                 <div class="delete_cart">
-                     从购物车中删除
-                 </div>
-             </li>
-     `;
+            `
+                <li>
+                    <div class="cart_goodspic">
+                        <input type="checkbox">
+                        <img src="https://www.only.cn/${ele.pic}">
+                    </div>
+                    <p class="cart_goodsname">${ele.des}</p>
+                    <div class="cart_color">
+                        ${ele.color}
+                    </div>
+                    <div class="cart_size">
+                        ${ele.size}
+                    </div>
+                    <div class="cart_count">
+                        <div>
+                            <b>${ele.count}</b>
+                            <div>
+                                <label class="count_add">+</label>
+                                <label class="count_low">-</label>
+                            </div>
+                        </div>
+                        <p>库存:<strong>${ele.sell}</strong>件</p>
+                    </div>
+                    <div class="cart_oneprice">
+                        ￥<i>${ele.priseNow}</i>
+                    </div>
+                    <p class="cart_allprice">
+                        ￥<i>${ele.priseNow * ele.count}</i>
+                    </p>
+                    <div class="delete_cart">
+                        从购物车中删除
+                    </div>
+                </li>
+            `;
         })
         $(".cart_main_body_goodsItem ul").append(cart_HTML)
             ;
@@ -82,12 +82,18 @@ require(["../../static/conf/config.js"], function () {
             var deledet_index = $(this).parent("li").index();
             $(this).parent("li").remove();
             cart_message.splice(deledet_index, 1);
+            $(".specialCart>i").text(parseInt($(".specialCart>i").text()) - 1);
+            $(".smCartMessage>div p i").text(parseInt($(".smCartMessage>div p i").text())+1);
+            $(".smCartMessage ul").children("li").eq(deledet_index).remove();
             localStorage.setItem("cart", JSON.stringify(cart_message))
         })
 
         // 清空购物车
         $(".cart_main_body_footer").children("button").click(function () {
-            $(this).parent().siblings("ul").children("li").remove()
+            $(this).parent().siblings("ul").children("li").remove();
+            $(".specialCart>i").text(0);
+            $(".smCartMessage>div p i").text(0);
+            $(".smCartMessage ul li").remove();
             localStorage.removeItem("cart")
         })
 
@@ -175,8 +181,9 @@ require(["../../static/conf/config.js"], function () {
             var sm_cart_count = $(this).parent("div").parent("li").index();
             $(this).parent("div").parent("li").remove();
             cart_message.splice(sm_cart_count, 1);
-            $(".smCartMessage>div p i").text(parseInt($(".smCartMessage>div p i").text())-1);
-            $(".specialCart>i").text(parseInt($(".specialCart>i").text())-1)
+            $(".smCartMessage>div p i").text(parseInt($(".smCartMessage>div p i").text()) - 1);
+            $(".specialCart>i").text(parseInt($(".specialCart>i").text()) - 1);
+            $(".cart_main_body_goodsItem ul li").eq(sm_cart_count).remove();
             localStorage.setItem("cart", JSON.stringify(cart_message))
         })
 

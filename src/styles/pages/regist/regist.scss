@@ -539,7 +539,8 @@ body {
 .smCartMessage>ul {
     max-height: 400px;
     width: 300px;
-    overflow-y: auto
+    overflow-y: auto;
+    background: #F4F4F4
 }
 
 .smCartMessage>ul li {
@@ -589,10 +590,13 @@ body {
 
     .smCartMessage_size,
     .smCartMessage_color {
-        width: 210px;
+        width: 200px;
         font-size: 12px;
         color: #000;
-        line-height: 24px
+        line-height: 24px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
     }
 
     button {

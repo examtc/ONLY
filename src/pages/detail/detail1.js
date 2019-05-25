@@ -354,11 +354,45 @@ require(["../../static/conf/config.js"], function () {
                             sell: select_shengyu
                         });
                         localStorage.setItem('cart', JSON.stringify(arr));
+
+                        var _cartHTML1 = "";
+                        _cartHTML1 +=
+                                `
+                <li>
+                    <img src="https://www.only.cn${select_pic}">
+                    <div>
+                        <p class="smCartMessage_des">
+                            <label>${select_des}</label>
+                            <i>￥${select_priseNow}</i> <b>x${select_count}</b>
+                        </p>
+                        <p class="smCartMessage_color">
+                            颜色：<i>${select_color}</i>
+                        </p>
+                        <p class="smCartMessage_size">
+                            尺码：<i>${select_size}</i>
+                        </p>
+                        <button>删除</button>
+                    </div>
+                </li>
+                `;
+                        $(".smCartMessage ul").append(_cartHTML1);
+                        $(".smCartMessage_size").siblings("button").click(function(){
+                            var cart_messages = JSON.parse(localStorage.getItem("cart"));
+                            var sm_cart_counts = $(this).parent("div").parent("li").index();
+                            $(this).parent("div").parent("li").remove();
+                            cart_messages.splice(sm_cart_counts, 1);
+                            $(".smCartMessage>div p i").text(parseInt($(".smCartMessage>div p i").text())-1)
+                            $(".specialCart>i").text(parseInt($(".specialCart>i").text())-1)
+                            localStorage.setItem("cart", JSON.stringify(cart_messages))
+                        })
+
                         $(".specialCart>i").text(parseInt($(".specialCart>i").text())+1);
                         $(".smCartMessage>div p i").text(parseInt($(".smCartMessage>div p i").text())+1)
                         $(".addsuccess").show()
                     };
                 })
+
+                // 点击继续购物，弹出框隐藏
                 $(".addsuccess").children("p").children("span").click(function(){
                     $(".addsuccess").hide()
                 })
@@ -369,27 +403,29 @@ require(["../../static/conf/config.js"], function () {
                 var _cartHTML = "";
                 cart_message.forEach(ele1 => {
                     _cartHTML +=
-                        `
-        <li>
-            <img src="https://www.only.cn${ele1.pic}">
-            <div>
-                <p class="smCartMessage_des">
-                    <label>${ele1.des}</label>
-                    <i>￥${ele1.priseNow}</i> <b>x${ele1.count}</b>
-                </p>
-                <p class="smCartMessage_color">
-                    颜色：<i>${ele1.color}</i>
-                </p>
-                <p class="smCartMessage_size">
-                    尺码：<i>${ele1.size}</i>
-                </p>
-                <button>删除</button>
-            </div>
-        </li>
-        `
+                 `
+                    <li>
+                        <img src="https://www.only.cn${ele1.pic}">
+                        <div>
+                            <p class="smCartMessage_des">
+                                <label>${ele1.des}</label>
+                                <i>￥${ele1.priseNow}</i> <b>x${ele1.count}</b>
+                            </p>
+                            <p class="smCartMessage_color">
+                                颜色：<i>${ele1.color}</i>
+                            </p>
+                            <p class="smCartMessage_size">
+                                尺码：<i>${ele1.size}</i>
+                            </p>
+                            <button>删除</button>
+                        </div>
+                    </li>
+                `
                 });
                 $(".smCartMessage ul").append(_cartHTML);
                 $(".smCartMessage>div p i").text(cart_message.length)
+
+                // 导航栏购物车里面的删除按钮
                 $(".smCartMessage ul li button").click(function () {
                     var sm_cart_count = $(this).parent("div").parent("li").index();
                     $(this).parent("div").parent("li").remove();

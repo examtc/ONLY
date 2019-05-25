@@ -107,25 +107,30 @@ require(["../../static/conf/config.js"], function () {
                        <span class="nowprice">￥${ele.discountPrice}</span>
                        <span class="lastprice">￥${ele.originalPrice}</span>
                    </p>
-                   <span>
+                   <span style="display:none">
                        快速购买
                    </span>
                </li>
                `;
                 });
+
                 $(".list1_main_goods").append(goodsHTML);
-                $(".list1_main_goods li a img").hover(function () {
-                    // console.log($(this))
-                    $(this).stop().animate({
+                // 鼠标移入移出效果
+                $(".list1_main_goods li").hover(function(){
+                    $(this).find("img").stop().animate({
                         height: "560px",
                         width: "350px"
-                    }, 600)
-                }, function () {
-                    $(this).stop().animate({
+                    }, 600);
+                    $(this).children("span").show(550);
+                },function(){
+                    $(this).find("img").stop().animate({
                         height: "535px",
                         width: "335px"
-                    }, 600)
+                    }, 600);
+                    $(this).children("span").hide(550);
                 })
+
+
             }
         })
 

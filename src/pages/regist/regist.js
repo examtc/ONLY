@@ -24,6 +24,13 @@ require(["../../static/conf/config.js"], function () {
         // 手机号验证
         $(".regist_phone input").blur(function () {
             telValue = $(".regist_phone input").val().replace(/(^\s*)|(\s*$)/g, '');
+            // var _arr = JSON.parse(localStorage.getItem("userinfo"));
+            // _arr.forEach(eles => {
+            //    if(eles.username == telValue) {
+            //        return false;
+            //        console.log("该手机号已注册")
+            //    }
+            // });
             if (telValue == "") {
                 $(this).css({
                     borderColor: "#F64A4A"
@@ -356,8 +363,8 @@ require(["../../static/conf/config.js"], function () {
             var sm_cart_count = $(this).parent("div").parent("li").index();
             $(this).parent("div").parent("li").remove();
             cart_message.splice(sm_cart_count, 1);
-            $(".smCartMessage>div p i").text(parseInt($(".smCartMessage>div p i").text())-1);
-            $(".specialCart>i").text(parseInt($(".specialCart>i").text())-1)
+            $(".smCartMessage>div p i").text(parseInt($(".smCartMessage>div p i").text()) - 1);
+            $(".specialCart>i").text(parseInt($(".specialCart>i").text()) - 1)
             localStorage.setItem("cart", JSON.stringify(cart_message))
         })
 
