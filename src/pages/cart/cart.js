@@ -85,6 +85,7 @@ require(["../../static/conf/config.js"], function () {
             $(".specialCart>i").text(parseInt($(".specialCart>i").text()) - 1);
             $(".smCartMessage>div p i").text(parseInt($(".smCartMessage>div p i").text())+1);
             $(".smCartMessage ul").children("li").eq(deledet_index).remove();
+            $(".cart_main_title>p").children("i").text(parseInt($(".cart_main_title>p").children("i").text())-1)
             localStorage.setItem("cart", JSON.stringify(cart_message))
         })
 
@@ -94,6 +95,7 @@ require(["../../static/conf/config.js"], function () {
             $(".specialCart>i").text(0);
             $(".smCartMessage>div p i").text(0);
             $(".smCartMessage ul li").remove();
+            $(".cart_main_title>p").children("i").text(0)
             localStorage.removeItem("cart")
         })
 

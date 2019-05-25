@@ -121,13 +121,13 @@ require(["../../static/conf/config.js"], function () {
                         height: "560px",
                         width: "350px"
                     }, 600);
-                    $(this).children("span").show(550);
+                    $(this).children("span").stop().show(300);
                 },function(){
                     $(this).find("img").stop().animate({
                         height: "535px",
                         width: "335px"
                     }, 600);
-                    $(this).children("span").hide(550);
+                    $(this).children("span").stop().hide(300);
                 })
                 
             }
