@@ -240,20 +240,7 @@ require(["../../static/conf/config.js"], function () {
                     var _number = $(this).index();
                     // 显示库存
                     $(".goodsCount p i").text(random_select + _number * 3);
-                    var _maxCount = $(".goodsCount p i").text();
-                    $(".goodsCount span").first().click(function () {
-                        var _count = parseInt($(".goodsCount div>i").text());
-                        if (_count < _maxCount) {
-                            _count++;
-                        }
-
-                        $(".goodsCount div>i").text(_count)
-                    }).siblings().click(function () {
-                        var _count = parseInt($(".goodsCount div>i").text());
-                        if (_count > 1)
-                            _count--;
-                        $(".goodsCount div>i").text(_count)
-                    })
+                    $(".goodsCount div>i").text(1);
                     str6 +=
                         `
                     <li><img src="https://www.only.cn${_class[_number].picurls[0]}"></li>
@@ -294,6 +281,22 @@ require(["../../static/conf/config.js"], function () {
                         }
                     })
                 });
+    
+                $(".goodsCount span").first().click(function () {
+                    var _maxCount = $(".goodsCount p i").text();
+                    var _count = parseInt($(".goodsCount div>i").text());
+                    if (_count < _maxCount) {
+                        _count++;
+                    }
+
+                    $(".goodsCount div>i").text(_count)
+                }).siblings().click(function () {
+                    var _maxCount = $(".goodsCount p i").text();
+                    var _count = parseInt($(".goodsCount div>i").text());
+                    if (_count > 1)
+                        _count--;
+                    $(".goodsCount div>i").text(_count)
+                })
 
                 _class.forEach(goodsItem => {
 
